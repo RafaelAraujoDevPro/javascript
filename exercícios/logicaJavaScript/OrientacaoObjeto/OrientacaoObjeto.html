@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação orientada a Objetos</title>
+</head>
+<body>
+    <h1>Progamação orientada a objetos</h1>
+    <p>Programação Orientada a Objeto (também conhecida pela sua sigla POO) ou Modelagem Orientada ao Objeto, é um modelo/paradigma de projeto e programação de software baseado na abstração digital do mundo real, através da composição e interação entre diversas unidades chamadas de 'objetos' e as classes (representando objetos reais contendo identidade, propriedades e, métodos);[2] baseado em quatro principais componentes da programação: abstração digital, encapsulamento, herança e, polimorfismo</p>
+    <p>Dentre as várias abordagens da POO, as baseadas em classes são as mais comuns: usando um objeto que pode ser manipulado, criado a partir de uma classe através do instanciamento.[2] Estes possuem métodos que modificam seus próprios dados, definindo o tipo do objeto. A classe determina o comportamento (métodos), estados possíveis (atributos) e, o relacionamento com os outros objetos.[3] A maior alternativa as classes é o uso de protótipos, onde objetos são cópias de outros, onde apenas a herança simples é implementada pela cópia.</p>
+    
+    <h2>Pontos importantes</h2>
+    <h3>O que é POO</h3>
+    <ul>
+        <li><strong>Programação orientada a objetos(POO)</strong>: método de programação(paradigma) que usa tipos de dados personalizados, ou seja, podemos construir outros tipos de dados além dos dados primitivos.</li>
+        <li>Baseia-se fundamentalmente no conceito de <strong>Objetos</strong></li>
+    </ul>
+    <h3>Vantagens de POO</h3>
+    <ul>
+        <li>Fornece uma estrutura modular para construções de programas. Os programas ficam divididos em partes menores o que facilita a organização.</li>
+        <li>O software se torna mais fácil de ler e posteriormente de fazer manutenção.</li>
+        <li><strong>POO</strong> permite o reúso de códigos já programados (através das classes e as instâncias delas), o que torna o desenvolvimento mais rápido e produtivo</li>
+        <li>Os objetos instânciados podem ser reultilizados em aplicações diferentes</li>
+        <li>Encapsulamento: não é preciso conhecer a implementação interna de um objeto para poder usá-lo. Ou seja, podemos usar classes e objetos, trechos de códigos que outras pessoas desenvolveram sem saber com foram progamados internamente.</li>
+    </ul>
+
+    <h2>Abstração</h2>
+    <p>Em ciência da computação, a abstração é a habilidade de concentrar nos aspectos essenciais de um contexto, ignorando características menos importantes ou acidentais. Em modelagem ou programação orientada a objetos, uma classe é uma abstração de entidades existentes no contexto de um software, como exemplo, imaginamos a abstração referente a classe Animais, que se divide em várias sub-classes, como: Anfíbios, Répteis e Mamíferos, que contém objetos de sub-classe como Ser-humano, Jacaré e outros.</p>
+    <p>Uma classe abstrata é desenvolvida para representar entidades e conceitos abstratos. A classe abstrata é sempre uma superclasse que não possui instâncias. Ela define um modelo (template) para uma funcionalidade e fornece uma implementação incompleta - a parte genérica dessa funcionalidade - que é compartilhada por um grupo de classes derivadas. Cada uma das classes derivadas, completa a funcionalidade da classe abstrata adicionando um comportamento específico.</p>
+    <h3>Pontos importantes</h3>
+    <ul>
+        <li>Abstrair é selecionar aspectos específicos de um problema a ser analizado, deixando de lado outros aspectos. Representar uma entidade(algo que ocorre, que existe) do mundo real na forma de idéias.</li>
+        <li>Entidades abstraidas podem se comunicar entre si através de <em>mensagens</em></li>
+    </ul>
+    <h2>Mensagens</h2>
+    <p>Mensagem, em programação orientada a Objeto, seria uma espécie de 'mensagem fictícia' que ocorre dentro do sistema para 'invocar' diretamente uma classe com finalidade de usá-la ou simplesmente invocar 'estados' da classe. Resumindo, mensagem seria uma ativação de classe e/ou derivados.</p>
+    <h3>Pontos importantes</h3>
+    <ul>
+        <li>Os objetos se comunicam através de <em>troca de mensagens</em></li>
+        <li>Mensagem é um sinal enviado de um objeto a outro, requisitando um serviço, usando uma operação programada no objeto chamado.</li>
+        <li>As mensagens somente ocorre entre objetos que possuem uma associação entre si</li>
+        <li>As mensagens também são programasas</li>
+        <li>Quando uma mensagem é recebida, uma operação é invocada no objeto chamado.</li>
+        <li>Existem vários formatos de chamadas: procedures(subs e functions), passagem de sinais entre threads, acionamento de eventos, e etc.</li>
+    </ul>
+
+    <h2>Classes</h2>
+    <p>Na programação orientação a objetos, uma classe é um Tipo abstrato de Dados (TAD). Ou seja, uma descrição que abstrai um conjunto de objetos com características similares (um projeto do objeto), é um código da linguagem de programação orientada a objetos que define e implementa um novo tipo de objeto, que terão características (atributos) que guardaram valores e, também funções específicas para manipular estes. Formalmente, é um conceito que encapsula abstrações de dados e procedimentos que descrevem o conteúdo e o comportamento de <em>entidades</em> do mundo real, representadas por objetos. De outra forma, uma classe pode ser definida como uma descrição das propriedades ou estados possíveis de um conjunto de objetos, bem como os comportamentos ou ações aplicáveis a estes mesmos objetos.</p>
+    <p>A classe é um elemento primordial de um diagrama de classes, modelagem importante na programação orientada a objetos.</p>
+    <h3>Pontos importantes</h3>
+    <ul>
+        <li>Uma classe representa uma idéia ou conceito e classifica objetos  que tenham propriedades similares.</li>
+        <li>São os blocos de construção mais importane do sistema Oritenção a Objetos, com responsabilidades bem definidas dentro da aplicação.</li>
+        <li>Coleção de objetos descritos com os mesmos atributos  e operações.</li>
+        <li>Tipo personalizado de dados, è como um "molde" para criação de objetos.</li>
+    </ul>
+
+    <h3>Estrutura de Classe</h3>
+    <p>Uma classe comumente define o estado e o comportamento de um objeto implementando atributos e métodos. Os atributos (por vezes referidos como "campos", "membros de dados" ou "propriedades"), indicam as possíveis informações armazenadas por um objeto de uma classe, representando o estado de cada objeto. Os métodos (por vezes referidos como "operações" ou serviços) são procedimentos que formam os comportamentos e ações oferecidos por objetos de uma classe, sendo responsáveis por alterar o estado ou fornecer informações sobre um objeto.</p>
+    <figure class="codeSnap">
+        <img src="/img/Notacao-de-classe.svg" alt="">
+    </figure>
+    <p>Outros elementos associados a uma classe são:</p>
+    <ul>
+        <li>Construtor e destrutor - métodos especiais que definem o comportamento do objeto de uma classe no momento da sua criação e destruição</li>
+        <li>Propriedade - define o acesso a um estado do objeto.</li>
+        <li>Evento - define um ponto em que o objeto pode chamar outros procedimentos de acordo com seu comportamento e estado interno.</li>
+        <li>Um conjunto de classes são organizadas em um projeto só recebe o nome de <strong>Namespace</strong>.</li>
+    </ul>
+    <h3>Atributos</h3>
+    <p>Os Atributos em Programação Orientada a Objetos são os elementos que definem a estrutura de uma classe. Os atributos também são conhecidos como variáveis de classe, e podem ser divididos em dois tipos básicos: atributos de instância e de classe.</p>
+    <p>Os valores dos atributos de instância determinam o estado de cada classe. Um atributo de classe possui um estado que é compartilhado por todos os objetos de uma classe. Atributos de classe podem ser chamados também de atributos estáticos ou dinâmicos. "Const" são considerados atributos de classe quando estão fora de qualquer método.</p>
+    <ul>
+        <li>Atributos Estáticos: mantém o mesmo valor durante sua exitência, como uma data de nascimento por exemplo.</li>
+        <li>Atributos Dinâmicos: Valores que variam com o passar do tempo como a idade de uma pessoa.</li>
+    </ul>
+    <p>As mensagens enviadas a um objeto (chamada de um método) podem mudar o valor de um ou mais atributos, alterando o estado de um objeto instânciado. Um atributo é um dado para o qual cada objecto instânciado tem seu próprio valor. Atributos são, basicamente, a estrutura de dados que vai representar a classe.</p>
+
+    <h3>Métodos</h3>
+    <p>Em orientação a objetos, uma Função (ou função membro) é uma sub-rotina (ou procedimento ou função) <strong>associada a um objeto</strong>, e que possui acesso aos seus dados, as variáveis membro. Ele é executado por um objeto ao receber uma mensagem. Os métodos determinam o comportamento dos objetos de uma classe e são análogos às funções ou procedimentos da programação estruturada. O envio de mensagens (chamada de métodos) pode alterar o estado de um objeto.</p>
+
+    <p>Em linguagens baseadas em classes eles são definidos na classe. Métodos definem o comportamento a ser exibido pelas instâncias da classe associada no tempo de execução do programa. Métodos possuem a propriedade especial que em tempo de execução, possuem acesso aos dados armazenados em uma instância da classe (ou instância de classe ou objeto de classe ou objeto) que estão associados e são, desta forma, capazes de controlar o estado da instância. A associação entre classe e método é chamada de ligação (binding). Um método associado com uma classe é dito estar ligado (bound) à classe. Métodos podem ser ligados a uma classe em tempo de compilação (ligação estática) ou a um objeto em tempo de execução (ligação dinâmica).</p>
+    <ul>
+        <li>Método é a lógica contida em  uma classe para atribuir comportamentos (sequência de comandos), e é indentificado por um nome que deve ser criado.</li>
+        <li>São similares as funções e procedimentos, ou seja, além de ter uma nome tem um corpo onde as intruções de comandos são declarados para serem executado pelo objeto quando for invocado (chamado).</li>
+        <li>O ato de invocar (chamar) um método é o que chamamos de passagem de mensagens para o objeto instânciado.</li>
+        <li>Geralmente os métodos são associados as ações que o objeto pode executar.</li>
+        <li>Os métodos podem receber dados para processamentos através dos parâmetros e depois retornar dados processados para a classe.</li>
+        <li>Um Método deve executar uma única operação de durante sua existência. Se for necessário realizar múltiplas operações em uma classe, devemos criar multiplos métodos para elas.</li>
+    </ul>
+
+    <h2>Objetos (Instância de uma classe)</h2>
+    <p><strong>Objeto</strong> é uma referência a um local da memória que possui um valor. Um objeto pode ser uma variável, função, ou estrutura de dados. Em programação orientada a objetos, a palavra objeto refere-se a um "molde"(classe) que passa a existir a partir de uma <em>instância da classe</em>, ou seja, é uma ocorrência de uma classe. <strong>O Objeto é uma entidade que formaliza o modo pelo qual comprendemos algo no domínio de um problema.</strong> É a entidade mais próxima possível das entidades do mundo real. Objetos são os substantivos do domínio de uma problema. A classe define o comportamento do objeto, usando atributos (propriedades) e métodos (ações)</p>
+    <p>Quais as características que existem em um Objeto em POO?</p>
+    <p> Objeto em Programção Orientada a Objetos tem <strong>Estado</strong>, <strong>Comportamento</strong> e uma <strong>Indentidade</strong></p>
+    <ul>
+        <li><strong>Estado</strong>: é definido pelas propriedades que o objeto possui e os valores que são atribuidos a ele.</li>
+        <li><strong>Comportamento</strong>: definido pela forma que o objeto reage, em termos de mudanças do seu estado e o relacionamento com outros objetos.</li>
+        <li><strong>Indentidade</strong>: porpriedade pela qual ele se distingue dos outros.</li>
+    </ul>
+    <p>O que diferrencia um objeto de uma classe?</p>
+    <ul>
+        <li><strong>Classe</strong>: a classe é como um objeto de "molde" de características que são passados para o objeto instânciado (criado), através de atributos com valores e metodos de comportamentos ou funções.</li>
+        <li><strong>Objeto</strong>: já o objeto é uma entidade concreta com tempo e espaço de existência, enquanto que a classe é apenas uma abstração do que seria o objeto.</li>
+    </ul>
+
+    <p>Qual a relação entre classe e objetos</p>
+    <p>Objetos também são entidades abstratas porém eles tem um significado concreto com relação ao problema que estivermos analizando. A classe irá originar os objetos somente por requsição, esse processo é chamado de instânciação do objeto, por isso em POO, os objetos são chamados de <strong>instância de classe</strong>. Na Programação orientada a objetos criamos as classes que por sua vez originam os objetos que serão chamados em tempo de execução. Sempre quando a aplicação for executa quem será chamado para a execução será o objeto instânciado, e não a classe. Uma classe pode originar múltiplos objetos apartir dela, porém com valores de atributos distintos entre eles.</p>
+    <figure class="codeSnap">
+        <img src="/img/classe-objetos.svg" alt="">
+    </figure>
+    
+    <h2>Herança</h2>
+    <p>Herança é um princípio de orientação a objetos, que permite que classes compartilhem atributos e métodos, através de "heranças". Ela é usada na intenção de reaproveitar código ou comportamento generalizado ou especializar operações ou atributos. O conceito de herança de várias classes é conhecido como herança múltipla.</p>
+    <p>Como exemplo pode-se observar as classes 'aluno' e 'professor', onde ambas possuem atributos como nome, endereço e telefone. Nesse caso pode-se criar uma nova classe chamada por exemplo, 'pessoa', que contenha as semelhanças entre as duas classes, fazendo com que aluno e professor herdem as características de pessoa, desta maneira pode- se dizer que aluno e professor são subclasses de pessoa. Também podemos dizer que uma classe pode ser abstrata(abstract) ou seja ela não pode ter uma instância, ela apenas "empresta" seus atributos e metódos como molde para novas classes.</p>
+    <h3>Pontos importantes</h3>
+    <ul>
+        <li>Herança, em teoria, é um relacionamento entre as classes no qual uma classe "herda" os membros (atributos e métodos) de outra classe.</li>
+        <li>Com herança entre as classes, podemos criar classes mais complexas sem repetição de códigos.</li>
+    </ul>
+    
+    <script src="/exercicios/orientacaoObjeto.js"></script>
+</html>

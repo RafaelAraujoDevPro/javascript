@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercécios</title>
+</head>
+<body>
+    <h2>Exercícios de JavaScript</h2>
+    <h3>Problema Proposto</h3>
+    <ul>
+        <li>Pedir para o Usuário digitar dois números seguidos.</li>
+        <li>calcular a média entre os números digitados</li>
+        <li>Informar se o Usuário foi aprovado ou não.</li>
+    </ul>
+    <p>Observação: A nota de corte é 5, contudo se uma das notas for zero o Usuário é reprovado automaticamente.</p>
+    
+    <script>
+        var nota1 = parseInt(prompt('Digite um número"'))
+        var nota2 = parseInt(prompt('Digite outro número"'))
+        var media = (nota1+nota2) /2;
+        if((media>5)&&(media!=0)){
+            window.alert(`Parabéns, você foi aprovado, sua nota foi ${media}`)
+        } else {
+            window.alert(`Que pena, você foi reprovado, sua nota foi ${media}`)
+        }
+    </script>
+</body>
+</html>

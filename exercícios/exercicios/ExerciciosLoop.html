@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de estrurura de repetição</title>
+    <link rel="stylesheet" href="/style/estiloTable.css">
+</head>
+<body>
+    <section class="grid-conteiner">
+        <h2>Lista de alunos</h2>
+        <table class="l_table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Trabalho</th>
+                    <th>Prova</th>
+                    <th>Média</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="t_aluno" id="trAluno">
+                    <td class="td_nome">Patrícia</td>
+                    <td class="td_trabalho">5.5</td>
+                    <td class="td_prova">7.5</td>
+                    <td class="td_media">0</td>
+                </tr>
+                <tr class="t_aluno">
+                    <td class="td_nome">João</td>
+                    <td class="td_trabalho">7.0</td>
+                    <td class="td_prova">4.0</td>
+                    <td class="td_media">5.5</td>
+                </tr>
+                <tr class="t_aluno">
+                    <td class="td_nome">Fernanda</td>
+                    <td class="td_trabalho">9.5</td>
+                    <td class="td_prova">10.0</td>
+                    <td class="td_media">0</td>
+                </tr>
+                <tr class="t_aluno">
+                    <td class="td_nome">Roberto</td>
+                    <td class="td_trabalho">8.0</td>
+                    <td class="td_prova">7.0</td>
+                    <td class="td_media">0</td>
+                </tr>
+                <tr class="t_aluno">
+                    <td class="td_nome">Jocieli</td>
+                    <td class="td_trabalho">6.0</td>
+                    <td class="td_prova">9.6</td>
+                    <td class="td_media">0</td>
+                </tr>
+                <tr class="t_aluno">
+                    <td class="td_nome">Grabiel</td>
+                    <td class="td_trabalho">3.2</td>
+                    <td class="td_prova">4.0</td>
+                    <td class="td_media">0</td>
+                </tr>
+                <caption class="descricao">
+                    <span></span> <mark>Apronado</mark> 
+                    <span></span> <mark>Recuperação</mark> 
+                    <span></span> <mark>Reprovado</mark>
+                </caption>
+                
+            </tbody>
+
+        </table>
+    </section>
+    <section class="grid-conteiner">
+        <h2>Cadastro de alunos</h2>
+        <form id="formAluno">
+            <div class="form-conteiner">
+                <div class="nome">
+                    <label for="textNomeId" class="rotulo">Nome:</label><br>
+                    <input type="text" id="textNomeId" name="textNome" placeholder="Informe o nome do aluno" maxlength="50" required class="nome-aluno">
+                </div>
+                <div class="trabalho">
+                    <label for="notaTrabalhoId" class="rotulo">Nota do trabalho:</label><br>
+                    <input type="number" id="notaTrabalhoId" name="notaTrabalho" placeholder="Nota do trabalho" required class="nome-aluno" step="0.1">
+                </div>
+                <div class="prova">
+                    <label for="notaProvaId" class="rotulo">Nota da prova:</label><br>
+                    <input type="number" placeholder="Nota da prova" id="notaProvaId" name="notaProva" required class="nome-aluno" step="0.1">
+                </div>
+                <di class="btn" >
+                    <button type="submit" id="btnId">Salvar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    
+    <div id="listar">
+
+    </div>
+    <script src="/exercicios/calcula-media.js" defer>
+    </script>
+    <script src="/exercicios/formulary.js" defer></script>
+</body>
+</html>

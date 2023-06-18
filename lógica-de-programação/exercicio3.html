@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<style>
+    body {
+        font-size: 1.5em;
+
+    }
+    strong {
+        color: blue;
+        font-family: monospace;
+    }
+</style>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá <strong>${nome}</strong>!, seu nome tem <strong>${nome.length}</strong> letras<br>`) //O length contabiliza os caractéres de uma string.
+        document.write(`Seu nome em maiúsculas é <strong>${nome.toUpperCase()}</strong><br>`)//O toUpperCase exibe uma string com letras maiúsculas
+        document.write(`Seu nome em letras minúscula é <strong>${nome.toLowerCase()}</strong>`)//O toLowerCase exibe uma string com letras minúsculas.
+
+</script>
+</body>
+</html>

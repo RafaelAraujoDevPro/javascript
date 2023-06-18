@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <h1>Hello Word!</h1>
+    <h2>Exercicios de javaScript</h2>
+    <p>Para converter uma string para number no javaScript podemos usar o comando <strong>parseInt(n)</strong> ou <strong>parseFloat(n)</strong>. <mark>parseInt()</mark> converte uma string para numeros inteiros; Já o <mark>parseFloat()</mark> converte uma string para numeros reais.</p>
+    <p>Formatação de novas Strings:</p>
+    <pre>
+        <code>
+            var s = 'javaScript'
+            'Estou aprendendo s'
+            <!-- dessa forma não faz interpolação -->
+        </code>
+    </pre>
+
+    <script>          //Dentro de prompt será string por padrão.
+      var n1 = Number.parseInt(window.prompt("Digite um número! "));
+      var n2 = Number.parseFloat(window.prompt("Digite outro número! "));
+      var total = n1+n2;
+      window.alert(`a soma de ${n1} mais ${n2} e igual a ${total}`) // Usamos Template string
+    //   window.alert("O resultado é = " + String(total) +"!"); // Usamos concatenação
+      /*O sinal de + tem mais de uma função em javaScript, 
+        number + number será uma adição
+        string + string será uma concatenação */
+    </script>
+</body>
+</html>

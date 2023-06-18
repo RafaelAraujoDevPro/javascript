@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de comparação</title>
+</head>
+<body>
+    <h2>Operadores de comparação</h2>
+    <h3>Problema</h3>
+    <p>Pedir para o usuário digitar dois números e mostrar um bolean (true ou false) indicando se a média for maior que 5</p>
+    <script>
+        // var num1 = parseFloat(prompt('Digite um número!'))
+        // var num2 = parseFloat(prompt('Digite outro número!'))
+        // var media = (num1 + num2) / 2;
+        // window.alert('A média dos números digitados que é ' + media + ' é maior que o número 5?' );
+        // window.alert(media > 5);
+        //Coleta dos números dos Usuários.
+        var user1 = prompt('Digite um número!');
+        user1 = parseInt(user1);
+        var user2 = prompt('Digite um número!');
+        user2 = parseInt(user2);
+        
+        
+        //Explicação das regras
+        alert('Vamos realizar um sorteio entre 0 e 1. Se der 0 ganha quem digitou o MENOR número. Se der 1 ganha quem digitou o MAIOR número.');
+  
+        //Os dois Usuários digitaram iguais
+        if(user1 === user2) {
+            alert('Empate!');
+        } else {
+                //Soteio de um número real de 0 até 0.999.. vezes 2.
+                var sorteio = parseInt(Math.random() * 2);
+                alert(`O número sorteado foi: ${sorteio}!`);
+                //Ganhou o MENOR número.
+                if(sorteio === 0) {
+                    if(user1 < user2) {
+                           alert(`Parabéns Usuário 1, você digitou ${user1},  ganhou!`); 
+                    } else {
+                            alert(`Parabéns Usuário 2, você digitou ${user2}, ganhou!`)
+                            }
+                   if(sorteio === 1) {
+                    if(user1 > user2) {
+                           alert('Parabéns Usuário 1, você ganhou!');   
+                    } else {
+                            alert('Parabéns Usuário 2, você ganhou!')
+                        }
+                    }
+            
+                } 
+            }
+    </script>
+</body>
+</html>

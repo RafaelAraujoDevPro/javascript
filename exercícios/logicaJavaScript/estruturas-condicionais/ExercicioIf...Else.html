@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de if...else</title>
+</head>
+<body>
+    <section>
+        <h1>Sistema de multas</h1>
+        Velocidade do carro: <input type="number" name="textVel" id="textVelId">
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id="resultado">
+        </div>
+    </section>
+    <section>
+        <h2>Sistema de notas escolares</h2>
+        Nota escolar do ano de 2023: <input type="number" name="notaAno" id="notaAnoId">
+        <input type="button" value="Enviar nota" onclick="enviarNota()">
+        <div id="resultNotas">
+
+        </div>
+    </section>
+    <section>
+        <h2>Cumprimento 'bom dia!' 'boa tarde!' 'boa noite!' </h2>
+        Que horas são: <input type="number" name="hora" id="horaId">
+        <input type="button" value="Informe as horas" onclick="infoHoras()">
+        <div id="informeHoras">
+
+        </div>
+    </section>
+
+    <script>
+        // Sistema de MULTAS
+        //Criar uma função com a chamada de evento onclick que faça o seguinte:
+        //Selecionar o 'input' do html;
+        //Selecionar a 'div' com id= 'resultado';
+        //Secionar o valor contido no 'input' do html;
+        // mostrar na div a seguinte mensagem: 'Sua velocidade atual é de ${velocidade}km/h'
+        //Exibir na tela a que SE ultrapassou o limite de velocidade 60km/h, tomou uma múlta;
+        //Exibir na tela uma advertencia de trânsito;
+
+        
+        function calcular() {
+            var testeVel = document.querySelector('input#textVelId');//campo do 'input';
+            var res = document.querySelector('div#resultado'); //onde será mostrado o valor coletado no 'input';
+            var vel = Number(testeVel.value); // pega o valor digitado no campo do 'input';
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong></p>`;
+            if(vel > 60){
+                res.innerHTML += `<p>Você últrapassou o limite de velocidade de 60km/h. <strong>MULTADO!</strong><p>`;
+            }
+            res.innerHTML += `<p>Dirija no limite de velocidade e sempre use cinto de segurança!</p>`;
+        }
+        
+        //=======================================================
+
+        //Sistema de notas escolares anual
+        //Criar uma função com a chamada onclick que faça o seguinte:
+        //Selecionar o campo do 'input' HTML;
+        //Selecionar o valor digitado no campo do 'input' HTML;
+        //Selecionar a div com id 'resultNotas';
+        //*Mostrar um parágrafo com a mesagem,:'Sua nota foi ${nota}, portanto APROVADO! SE a nota for maior que 7' 
+        //*Mostrar um parágrafo com a mensagem: Sua nota foi ${nota}, ainda tem chance, RECUPERAÇÃO! SE a nota for menor que 7 e maior ou igual a 4;
+        //*Mostrar um parágrafo com a mensagem: Sua nota fot ${nota}, sinto muito, foi REPROVADO! SE a nota for menor que 4.
+        //<p></p>  <strong></strong>
+       
+        function enviarNota() {
+            var notaAnual = document.querySelector('input#notaAnoId');
+            var resultnota = document.querySelector('div#resultNotas');
+            var nota = Number(notaAnual.value);
+            if(nota > 7){
+                resultnota.innerHTML = `<p>Sua nota foi ${nota}, portanto foi <strong>APROVADO!</strong></p>`  
+            } else if((nota < 7) && (nota >= 4)){
+                resultnota.innerHTML += `<p>Sua nota foi ${nota}, você ainda tem chance, está de <strong>RECUPERAÇÃO!</strong></p>`  
+            } else {
+                resultnota.innerHTML += `<p>Sua nota foi ${nota}, sinto muito, você foi <strong>REPROVADO!</strong></p>`
+            }
+        }
+
+        //======================================================================
+
+        //Criar uma função com uma chamada de evento 'onclick' que faça o seguinte:
+        //Selecionar o campo do 'input';
+        //Selecionar o valor digitado no campo do 'input';
+        //Selecionar a div com o id = 'informeHoras' onde será mostrado um parágrafo com as mensagens;
+        //* Mostrar um parágrafo com a mensagem: 'Agora são exatamente ${hora} horas';
+        //* Morstra um parágrafo com a mensagem: 'Bom dia!', SE a hora for antes de 12 horas
+        //* Morstra um parágrafo com a mensagem: 'Boa tarde!' SE a hora for entre 12 até as 18 horas
+        //* Morstra um parágrafo com a mensagem: 'Boa noite!' Se a hora for entre 18 até as 24 horas;
+        //* Morstra um parágrafo com a mensagem: 'Boa madrugada!' Se a hora for entre 0 até as 6 horas;
+        //<p></p> <strong></strong> São ${hora}. 
+
+        function infoHoras() {
+            var horaDigt = document.getElementById('horaId'); // campo do input
+            var horaAtual = document.getElementById('informeHoras'); // div
+            var hora = Number(horaDigt.value); // valor digitado no campo do input;
+            horaAtual.innerHTML = `<p>Agora são exatamente <strong>${hora}</strong> horas</p>`;
+            if((hora > 6) && (hora < 12)) {
+                horaAtual.innerHTML += `<p><strong>Bom dia!</strong></p>`;
+            } else if((hora > 12) && (hora < 18)){
+                horaAtual.innerHTML += `<p><strong>Boa tarde!</strong></p>`
+            } else if((hora > 18) && (hora < 24)) {
+                horaAtual.innerHTML += `<p><strong>Boa noite!</strong></p>`
+            } else if((hora > 0) && (hora < 6)) {
+                horaAtual.innerHTML += `<p><strong>Boa madrugada!</strong></p>`
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de decisões</title>
+</head>
+<style>
+    strong {
+        color: red;
+        font-family: monospace;
+    }
+</style>
+<body>
+    <h2>Controle de decisões</h2>
+    <h3>Problema</h3>
+    <p>Pedir para o usuário digitar dois números e mostrar uma mensagem informando se foi aprovado ou não. A nota de corte é 5.</p>
+    <script>
+        var nota1 = parseFloat(prompt('Digite um número!'));
+        var nota2 = parseFloat(prompt('Digite outro número!'));
+        var media = (nota1 + nota2) / 2;
+        var plv = 'Parabéns!'
+        window.alert('A média dos números digitados é: ' + media);
+        if (media > 5) {
+            window.alert(`${plv} Sua média é ${media}, portanto você foi aprovado!`)
+        } else {
+            window.alert('Sua média é ' + media + ', você não foi aprovado!')
+        }
+    </script>
+</body>
+</html>

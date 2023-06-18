@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop For</title>
+</head>
+<style>
+    figure {
+        width: 40rem;
+        
+    }
+    figure img {
+        width: 100%;
+    }
+</style>
+<body>
+    <h2>Loop For</h2>
+    <p>A instrução <mark>for</mark> cria um loop que consiste em três expressões opcionais, entre parênteses e separadas por ponto e vírgula, seguidas por uma instrução (geralmente uma instrução de bloco ) a ser executada no loop.</p>
+    <h4>Sintaxe</h4>
+    <pre>
+        <code>
+            for (variável de inicialização; condição; passo) {
+                //executa <mark>iteração</mark> para o bloco equanto for "true"
+                //para a <mark>iteração</mark> quando for "false"
+            }
+        </code>
+    </pre>
+        <figure>
+            <img src="/img/loop-for.svg.svg" alt="">
+            <img src="/img/codigo-loop-for.png" alt="">
+        </figure>
+
+        <h3>Loop for in</h3>
+        <p>A instrução for...in itera sobre todas as propriedades de string enumeráveis de um objeto (ignorando propriedades codificadas por símbolos ), incluindo propriedades enumeráveis herdadas, ou sobre elementos de uma array.</p>
+        <h4>Sintaxe</h4>
+        <pre>
+            <code>
+                const object = { a: 1, b: 2, c: 3 };
+
+                for (const property in object) {
+                console.log(`${property}: ${object[property]}`);
+                }
+            </code>
+        </pre>
+        <figure>
+            <img src="./img/code-forIn-js.png" alt="">
+        </figure>
+        <h3>for of</h3>
+        <p>A instrução for...of executa um loop que opera em uma sequência de valores provenientes de um objeto iterável . Objetos iteráveis incluem instâncias de <mark>built-ins</mark> como <mark>Array</mark>, <mark>String</mark>, <mark>TypedArray</mark>, <mark>Map</mark>, <mark>Set</mark>, <mark>NodeList</mark> (e outras coleções DOM), bem como o <mark>arguments</mark> objeto, geradores produzidos por funções geradoras e iteráveis definidos pelo usuário.</p>
+        <p>Um for...ofloop opera nos valores originados de um iterável um por um em ordem sequencial. Cada operação do loop em um valor é chamada de iteração , e diz-se que o loop itera sobre o iterável . Cada iteração executa instruções que podem se referir ao valor da sequência atual.</p>
+        <p>Quando um loop for...of itera sobre um iterável, ele primeiro chama o método do iterável, que retorna um iterador e, em seguida, chama repetidamente o método do iterador resultante para produzir a sequência de valores a serem atribuídos a variable.</p>
+        <h4>Sintaxe</h4>
+
+
+        <pre>
+            <code>
+                /* for  ( variável of iterável ) {
+                      declaração
+                   } 
+                */
+               
+
+                const array1 = ['a', 'b', 'c'];
+
+                for (const element of array1) {
+                console.log(element);
+                }
+            </code>
+        </pre>
+
+        <figure>
+            <img src="/img/code-forof-js.png" alt="">
+        </figure>
+
+        <script src="forIn.js">
+
+        </script>
+
+</body>
+</html>

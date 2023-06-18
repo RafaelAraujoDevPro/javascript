@@ -1,0 +1,116 @@
+@charset 'UTF-8';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+
+}
+.grid-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 0rem 2rem;
+    height: fit-content;
+    justify-self: center;
+    margin: 2rem 0rem;
+}
+.grid-conteiner h2 {
+    margin-bottom: 1rem;
+}
+.l_table{
+    width: 100%;
+    height: fit-content;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+.l_table th, td {
+    border: 1px solid #aaa;
+    height: 2.5rem;
+    text-align: center;
+}
+.td_nome span {
+font-size: 0.6em;
+}
+.titulo {
+    cursor: pointer;
+}
+
+/* Campos de formularios *============*/
+
+.form-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ } 
+   
+.nome-aluno {
+    width: 19rem;
+    padding: 0rem 1rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #f6f6f680;
+    margin-bottom: 1rem;
+}
+.nome-aluno:focus {
+    outLine: none;
+}
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0.5rem;
+    width: 100%;
+   
+}
+.btn button {
+    width: 11.5rem;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    height: 2.5rem;
+    background-color: #0e9adb;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    cursor: pointer;
+}
+.descricao {
+    color: #aaa;
+    font-weight: 300;
+    font-family: monospace;
+}
+
+caption.descricao span {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%; 
+    margin: 0rem 0rem 0rem 3rem;
+}
+caption.descricao span:first-child {
+    background-color: blue;
+}
+caption.descricao span:nth-child(3) {
+    background-color: orange;
+}
+caption.descricao span:nth-child(5) {
+    background-color: red;
+}
+
+caption.descricao mark {
+    background: none;
+}
+caption.descricao mark:nth-child(2){
+    color: blue;
+}
+caption.descricao mark:nth-child(4) {
+    color: orange;
+}
+caption.descricao mark:last-child {
+    color: red;
+}

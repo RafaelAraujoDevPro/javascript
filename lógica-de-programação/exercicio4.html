@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+<h2>Exercícios de Lógica de programação</h2>
+    
+
+    <!-- Mostrar em um alert o seguinte texto o número (n1) elevado a (n2) é : (resultado) -->
+    <script>
+        // Pedir ao usuário que digite um número
+        var num1 = prompt('Digite um número!');
+        //Converter este número para inteiro
+        num1 = parseInt(num1);
+        //Pedir ao usuário que digite mais um número
+        var num2 = prompt('Digite outro número!')
+        //converter o número para inteiro
+        num2 = parseInt(num2);
+        resto = num1 % num2;
+        potencia = num1 ** num2;
+        menos = num1 - num2;
+
+        //  Mostrar em um comando alert o seguinte texto:
+        // O resto da divisão de (n1) por (n2) é: (resultado);
+        alert('O resto da divisão de ' + num1 + ' por ' + num2 + ' é: ' + resto + ' .')
+        //mostrar em um alert o texto:
+        // O número (num1) elevado a (num2) é igual á:
+        alert('O número ' + num1 + ' elevado à ' + num2 + ' é igual á: ' + potencia + ' .' )
+        //mostrar em um alert o texto:
+        //A subtração de num1 de num2 é igual à:
+        alert('A subtração de ' + num1 + ' de ' + num2 + ' é igual à:  ' + menos + '.')
+
+
+    </script>
+</body>
+</html>

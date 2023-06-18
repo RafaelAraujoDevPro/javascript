@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Compostas</title>
+    <link rel="stylesheet" href="/style/estilo.css">
+</head>
+<body>
+    <h1>Variáveis Compostas</h1>
+    <p>O objeto Array , assim como os arrays em outras linguagens de programação, permite armazenar uma coleção de vários itens sob um único nome de variável e possui membros para realizar operações de array comuns. O array é um vetor que é composto de elementos. Os elementos de um vetor é um par que agrupa o espaço da memória, o valor colocado dentro dele e o índice </p>
+    <figure class="codeSnap">
+        <img src="/img/Array.svg" alt="">
+    </figure>
+    <h2>Descrição</h2>
+    <p>Em JavaScript, os arrays não são primitivos , mas sim Array objetos com as seguintes características principais:</p>
+    <ul>
+        <li><strong>As matrizes JavaScript são redimensionáveis</strong> e podem conter uma mistura de diferentes tipos de dados .</li>
+        <li><strong>As matrizes JavaScript não são matrizes associativas</strong> e, portanto, os elementos da matriz não podem ser acessados usando strings arbitrárias como índices, mas devem ser acessados usando inteiros não negativos (ou sua respectiva forma de string) como índices.</li>
+        <li><strong>Arrays JavaScript são indexados por zero:</strong> o primeiro elemento de um array está em index 0, o segundo está em index 1, e assim por diante — e o último elemento está no valor dapropriedade length menos 1.</li>
+        <li><strong>As operações de cópia de matriz de JavaScript criam cópias rasas</strong> . (Todas as operações de cópia integradas padrão com quaisquer objetos JavaScript criam cópias rasas, em vez de cópias profundas ).</li>
+    </ul>
+
+    <h2>Metodos de array</h2>
+    <h3>reverse</h3>
+    <p>O método reverse() inverte uma matriz no lugar e retorna a referência à mesma matriz, o primeiro elemento da matriz agora se tornando o último e o último elemento da matriz tornando-se o primeiro. Ou seja, a ordem dos elementos no array será virada no sentido oposto ao indicado anteriormente. Para inverter os elementos em uma matriz sem alterar a matriz original, deve-se usar o .toReversed(). <strong>Valor de retorno:</strong> a referência à matriz original, agora invertida. Observe que a matriz é invertida no lugar e nenhuma cópia é feita.</p>
+    <figure class="codeSnap">
+        <img src="/img/array-reverse.png" alt="">
+        <img src="/img/array-reverse-resultado.png" alt="">
+    </figure>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos</title>
+</head>
+<style>
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 7rem;
+    max-width: 100%;
+    padding: 4rem 0;
+    
+    
+}
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 38rem;
+    background-color: #f9f3f3b0;
+    box-shadow: -4px 0px 21px -10px #aaa;
+    border-radius: 1rem;
+}
+.tabela {
+    text-align: center;
+    border-collapse:collapse;
+    background-color: aliceblue;
+    margin: 40px auto;
+    border: 1px solid #aaa;
+    
+}
+.tabela thead {
+    background-color: brown;
+   
+}
+.tabela th {
+    border: 1px solid #aaa;
+    color: #fff;
+    height: 2rem; 
+    position: relative;
+}
+.tabela th:nth-child(2) {
+    font-size: 0.8em;
+    padding: 0 0.5em 0.3em 0.5em;
+    vertical-align: bottom;
+}
+ th:first-child::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top:10px solid brown;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    left: 48%;
+    top: 2.4rem;
+
+}
+.tabela tr td {
+    border: 1px solid #aaa;
+    width:5rem;
+    height: 2rem;
+}
+.tabela td:nth-child(4n+4){
+    background-color: #405e04;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: monospace;
+    width: 2rem;
+}
+.tabela td:nth-child(5n+2) {
+width:2rem;
+color: brown;
+font-family: monospace;
+
+}
+strong {
+    color: brown;
+}
+</style>
+<body>
+
+    <main>
+        <section>
+            <h1>Operadores Lógicos</h1>
+            <h2>Tabela true e false para <strong>and(&&)</strong></h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th scope="row" colspan="3">Operador<br>and(&&)</th>
+                        <th scope="row" colspan="1">console.log()</th>
+                        <th scope="row" colspan="1">valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>true</td>
+                        <td>&&</td>
+                        <td>true</td>
+                        <td>&rarr;</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>true</td>
+                        <td>&&</td>
+                        <td>false</td>
+                        <td>&rarr;</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>false</td>
+                        <td>&&</td>
+                        <td>true</td>
+                        <td>&rarr;</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>false</td>
+                        <td>&&</td>
+                        <td>false</td>
+                        <td>&rarr;</td>
+                        <td>false</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Tabela true e false para <strong>or(||)</strong></h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th scope="row" colspan="3">Operador<br>or(||)</th>
+                        <th scope="row" colspan="1">console.log()</th>
+                        <th scope="row" colspan="1">valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>true</td>
+                        <td>||</td>
+                        <td>true</td>
+                        <td>&rarr;</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>true</td>
+                        <td>||</td>
+                        <td>false</td>
+                        <td>&rarr;</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>false</td>
+                        <td>||</td>
+                        <td>true</td>
+                        <td>&rarr;</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>false</td>
+                        <td>||</td>
+                        <td>false</td>
+                        <td>&rarr;</td>
+                        <td>false</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h1>Operadores bit a bit</h1>
+            <h2>Tabela de números binários para <strong>and(&)</strong></h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th scope="row" colspan="3">Operador<br>and(&)</th>
+                        <th scope="row" colspan="1">console.log()</th>
+                        <th scope="row" colspan="1">valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>&</td>
+                        <td>1</td>
+                        <td>&rarr;</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>&</td>
+                        <td>0</td>
+                        <td>&rarr;</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>&</td>
+                        <td>1</td>
+                        <td>&rarr;</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>&</td>
+                        <td>0</td>
+                        <td>&rarr;</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Tabela de números binários para <strong>or(|)</strong></h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th scope="row" colspan="3">Operador<br>or(|)</th>
+                        <th scope="row" colspan="1">console.log()</th>
+                        <th scope="row" colspan="1">valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>&</td>
+                        <td>1</td>
+                        <td>&rarr;</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>&</td>
+                        <td>0</td>
+                        <td>&rarr;</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>&</td>
+                        <td>1</td>
+                        <td>&rarr;</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>&</td>
+                        <td>0</td>
+                        <td>&rarr;</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

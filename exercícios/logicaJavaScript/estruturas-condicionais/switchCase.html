@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+    <link rel="stylesheet" href="/style/estilo.css">
+</head>
+<body>
+    <h1>Estrutura de decisão switch...case</h1>
+    <p>A instrução <strong>switch</strong>  avalia uma expressão , comparando o valor da expressão com uma série de <mark>case</mark> cláusulas e executa instruções após a primeira <em>case</em> cláusula com um valor correspondente, até que uma instrução <strong>break</strong> seja encontrada. A cláusula <strong>default</strong> de uma instrução switch será saltada se não casecorresponder ao valor da expressão.</p>
+    <h3>Sintaxe</h3>
+    <pre>
+        <code>
+            switch  ( expressão )  { 
+                caso  valor1 :
+                  declarações
+                caso  valor2 :
+                  declarações
+                // …
+                 valor do caso N  :
+                  declarações
+                padrão :
+                  declarações
+              }
+        </code>
+    </pre>
+    <p>Uma instrução switch primeiro avalia sua expressão. Em seguida, ela procura a primeira case cláusula cuja expressão avalia o mesmo valor que o resultado da expressão de entrada (usando a comparação de igualdade estrita ) e transfere o controle para essa cláusula, executando todas as instruções após essa cláusula.
+    Os valores de cláusula são avaliados apenas quando necessário — se uma correspondência já for encontrada, caseos valores de cláusula subsequentes não serão avaliados, mesmo quando forem visitados por fall-through .</p>
+    <figure class="codeSnap">
+        <img src="/img/switch-case.png" alt="">
+    </figure>
+    <p>Se nenhuma <mark>case</mark> cláusula correspondente for encontrada, o programa procura a cláusula opcional <mark>default</mark>  e, se encontrada, transfere o controle para essa cláusula, executando instruções após essa cláusula. Se nenhuma cláusula <em>default</em> for encontrada, o programa continua a execução na instrução após o final de switch. Por convenção, a cláusula default é a última cláusula, mas não precisa ser assim. Uma declaração switch pode ter apenas uma  cláusula default; várias cláusulas default resultarão em um arquivo</p>
+
+    <h3>Instrunção break</h3>
+    <p>Podemos usar a instrução <mark>break</mark> dentro de uma instrução do corpo switch para interromper a execução antecipadamente, geralmente quando todas as instruções entre duas cláusulas <mark>case</mark> foram executadas. Se <mark>break</mark> for omitido, a execução continuará na primeira instrução <mark>switch</mark> seguinte. A execução prosseguirá para a próxima cláusula <mark>case</mark>, mesmo para a cláusula default, independentemente de o valor dessa cláusula corresponder. Esse comportamento é chamado de "fall-through".</p>
+    <figure class="codeSnap">
+        <img src="/img/switch-case-break.png" alt="">
+    </figure>
+    <h3>Escopo léxico</h3>
+    <p>As cláusulas <mark>case</mark> e <mark>default</mark> são como rótulos : elas indicam possíveis lugares para os quais o fluxo de controle pode ir. No entanto, eles próprios não criam escopos lexicais (nem se rompem automaticamente — como demonstrado acima). Por exemplo:</p>
+    <pre>
+        <code>
+            const ação = "dizer_olá"; 
+            switch( ação )  { 
+              case "dizer_olá":
+                const mensagem = "olá"; 
+                console.log( mensagem ); 
+                break ; 
+              case "dizer_oi" :
+                const mensagem = "oi"; 
+                console.log( mensagem ); 
+                break ; 
+              padrão : 
+                console.log ("Ação vazia recebida." ); 
+            }
+        </code>
+    </pre>
+    <p>Este exemplo produzirá o <em>erro "Uncaught SyntaxError: Identifier 'message' has been declareed"</em>, porque a primeira declaração <em>const message = 'olá'</em>, conflita com a segunda declaração const message = 'oi', mesmo quando eles estão dentro de suas próprias cláusulas <mark>case</mark> separadas. Por fim, isso se deve ao fato de ambas constas declarações estarem dentro do mesmo escopo de bloco criado pelo switchcorpo. Para corrigir isso, sempre que precisar usar letou constdeclarações em uma casecláusula, <strong>envolva-os em um bloco {}.</strong></p>
+    <figre class="codeSnap">
+        <img src="/img/switch-case-scopo-lexico.png" alt="">
+    </figre>
+    <p>Agora este código esta exibindo "olá" no console.log() como deveria, sem nenhum erro.</p>
+
+    <form action="">
+        <select name="" id="">
+            <option value=""></option>
+        </select>
+    </form>
+
+    <script src="switchCase.js"></script>
+</body>
+</html>

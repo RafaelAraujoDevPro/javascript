@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.codeSnap {
+    width: 40rem;
+    height: fit-content;
+
+}
+.codeSnap img {
+    max-width: 100%;
+    min-height: 50%;
+    object-fit: contain
+}
