@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programação orientada a Objetos</title>
+    <link rel="stylesheet" href="/style/estilo.css">
 </head>
 <body>
     <h1>Progamação orientada a objetos</h1>
@@ -119,6 +120,152 @@
         <li>Herança, em teoria, é um relacionamento entre as classes no qual uma subclasse "herda" os membros (atributos e métodos) de outra classe.</li>
         <li>Com herança entre as classes, podemos criar classes mais complexas sem repetição de códigos.</li>
     </ul>
-    
+    <h3>Herança de classes com javaScript</h3>
+    <p>Para que uma subclasse herde propriedades de uma classe pai quando programamos com javaScript devemos declarar ela com a seguinte sintaxe:</p>
+    <pre>
+        <code>
+            class Carnivoro extends Mamiferos {
+                
+            }
+        </code>
+    </pre>
+    <p>Desta forma usando a palavra reservada "extends", no exemplo de sintaxe, a subclasse "Carnivoro" receberá de maneira direta as propriedades de dentro do "constructor" da classe pai "Mamiferos" e também os métodos contidos nela. Isso é assim porque na subclasse "Carnivoro" não tem um "constructor" próprio declarado e nem métodos.</p>
+    <p>Já quando a subclasse declara seu próprio "constructor", primeiro ela declara os parametros herdados no seu "constructor". Mas para que ela receba e use as propriedades de herança da classe pai, devemos declarar o método reservado do javaScript "super()". Dentro do método "super()" declaramos os parâmetros herdados da classe pai. Assim os parâmetros herdados serão válidos e só então a depois disso a subclasse poderá declarar atributos para propriedades próprias.</p>
+    <pre>
+        <code>
+            class Carnivoro extends Mamiferos {
+                constructor(especie,nome,idade,comePessoas) {
+                    super(especie,nome,idade);
+                    this.comePessoas = comePessoas;
+                }
+            }
+        </code>
+    </pre>
+    <h3>Herança Prototipada em javaScript</h3>
+    <p>A herança prototípica é a base do sistema de objetos do JavaScript. Cada objeto em JavaScript tem uma referência interna a outro objeto, chamado de “protótipo”. Quando uma propriedade ou método é acessado em um objeto, o JavaScript primeiro verifica se essa propriedade ou método existe no próprio objeto. Se não for encontrado, o JavaScript procurará no protótipo do objeto. Esse processo continua até que a propriedade ou método seja encontrado ou até que a cadeia de protótipos termine.</p>
+    <p>A herança prototípica permite a reutilização de código e a hierarquia de objetos sem a necessidade de classes. Isso proporciona uma flexibilidade significativa, já que um objeto pode herdar diretamente de outro objeto e até mesmo modificar seu protótipo em tempo de execução.</p>
+    <p>No javaScript a sintaxe para que uma função constructor herde propriedades e métodos de outros objetos é da seguinte maneira:</p>
+    <pre>
+        <code>
+            function MonitorDeClasse(nome,email){
+                Estudante.call(this, nome, email)
+            }
+        </code>
+    </pre>
+    <P>O método "call()" está invocando o construtor da função "Estudante()" para dentro do escopo da função "MonitorDeClasse()" onde é armazenado o objeto que a função "MonitorDeClasse()" irá criar. Para isso acontecer declaramos o "this" (que referencia o "<em>constructor</em>" da função "Estudante()") como argumento para o método "call()" invocado. Já no segundo argumento em diante do método "call()" invocado, pode receber os parâmetros da função "Estudante()" que serão atribuidos para a função "MonitorDeClasse()"</P>
+    <p>Também um Objeto pode receber um "protótipo novo" criado apartir de outro protótipo de outro objeto como herança protótipal. Em javaScript usamos a seguinte sintaxe para isso:</p>
+    <pre>
+        <code>
+            MonitorDeClasse.prototype = Object.create(Estudante.prototype);
+        </code>
+    </pre>
+
+    <h2>Encapsulamento em Programação Orientada a Objetos</h2>
+    <p>O encapsulamento é um dos pilares da orientação a objetos. Por meio dele, é possível simplificar bastante a programação, bem como proteger informações sigilosas ou sensíveis. Dominar esse conceito é fundamental, uma vez que com ele é possível deixar o código mais legível, funcional e reutilizável. A vantagem de utilizarmos esta estrutura é que conseguimos tratar toda saída e entrada de dados em uma classe</p>
+    <p>Encapsulamento é o mecanismo utilizado dentro da Orientação a Objetos para restringir o acesso externo ao comportamento interno de um objeto . As entradas, os processamentos e as saídas de um objeto não influenciam os dos outros, pois os seus relacionamentos são apenas referenciados. O encapsulamento também serve para ajudar as variáveis a não conflitarem durante a execução de uma aplicação e também não poluir o escopo global do browser.</p>
+    <p>Encapsular os dados de uma aplicação significa evitar que estes sofram acessos indevidos. Para isso, é criada uma estrutura que contém métodos que podem ser utilizados por qualquer outra classe, sem causar inconsistências no desenvolvimento de um código.</p>
+    <p>Na prática, isso é feito por meio de dois métodos: os getters e os setters. </p>
+    <ul>
+        <li>Getters: a funcionalidade de um <strong>getter</strong> é obter um valor de uma variável declarada como privada e permitir a leitura apartir de fora da classe. Os métodos gettes podem ser programados para exibir os dados em formato apropriados. um <strong>get</strong> é declarado dentro da própria classe.</li>
+        <li>Setters: Um <strong>setter</strong> é um método que permite modificar o valor de uma atributo da classe, geralmente um atributo que esteja privado e que não seja acessível diretamente. Assim teremos mais controle sobre como os valores são atribuidos aos campos. Os métodos <strong>setters</strong> podem ser programados para validar seus argumentos e rejeitar quaisquer tentativa de inserção de dados inválidos, </li>
+    </ul>
+    <p>Na linguagem javaScript devemos tomar um cuidado quando formos declarar estes métodos nas classes. Algo que não pode aconceter é nomear "getter" e "setter" com o mesmo nome de atributo da classe pois gera um erro.</p>
+    <p>Em Programação Orientada a Objeto o encapsulamento dispõe de niveis de proteção dos dados de uma objeto, que são três: "nivél publico", "nivél protegido", "nivél privado".</p>
+    <ul>
+        <li>Nivél publico: consiste no nível de proteção mais baixo de todos, uma vez que todas as classes de um programa podem acessar os dados e os métodos livremente. Pode-se dizer que, nesse caso, não existe encapsulamento;</li>
+        <li>Nivél protegido: nesse nível, o acesso passa a ser mais restrito. Somente as classes derivadas da original é que têm total acesso aos atributos e métodos. Aqui, já existe encapsulamento, de modo que os métodos get e set passam a ser usados, bem como na declaração do atributo usa-se o private em vez do public;</li>
+        <li>Nivél privado:  aqui, o acesso aos dados é feito somente dentro da própria classe onde ela foi declarada.</li>
+    </ul>
+
+    <p>Já em javaScript só existeem dois niveis de proteção dados de uma objeto: nivél público e nivel privado.</p>
+    <p>Difetente de outras linguagens de programação que ao declarar atributos de propriedades em uma classe é necessário especificar o nivél de proteção coma palavra reservada "public", no javaScript os atributos das propriedades já estão implícitamente declarados como  dados de <strong>nivel público</strong>, não sendo necessário específicar.</p>
+    <P>Para tornar uma propriedade de uma classe em <strong>nivél privado</strong> de proteção em javaScript atualmente, podemos declarar os nomes de atributos  precedidos de "#" para torna-los privados. Assim só será possível acessar esses atribudos através dos métodos "<strong>get</strong>"" e "<strong>set</strong>".</P>
+    <pre>
+        <code>
+            class pessoa {
+                #nome;<span>//nomes dos atributos estão fora do escopo do constructor</span>
+                #idade;
+                constructor(nome, idade) {  <span>//constructor da classe</span>
+                    this.#nome = nome;
+                    this.#idade = idade;
+                }
+                get nome(){
+                    return this.#nome;
+                }
+                set idade(idade) {
+                    return this.#idade = idade;
+                }
+            }
+        </code>
+    </pre>
+    <p>No exemplo de sintaxe acima os métodos <strong>get</strong> e <strong>set</strong> foram declarados para acessar propriedades privadas da classe. O <strong>get</strong> tem funcionalidade de retornar a propriedade que esta privada. O <strong>set</strong> permite acessar a propriedade para podermos atribuir novo valor para ela através dos parâmetros do método criado. No JavaScript, para que os métodos <strong>get</strong> e <strong>set</strong> tenho acesso aos <em>atributos modificados para privado</em> de uma classe de fato, devemos declarar o nome do atributo fora do escopo do "<em>constructor</em>" da classe, caso contrário os métodos não terão acesso as propriedades da classe.</p>
+
+    <h2>Polimorfismo em Programação Orientada a Objetos</h2>
+    <p>Em programação orientada a objetos existe o conceito do <strong>polimorfismo</strong> (a palavra polimorfismo significa mùltiplas formas). O polimorfismo remete ao método existente em um objeto pai, que quando herdado para um outro objeto filho, pode mudar sua funcionalidade mesmo tendo o nome e assinatura iguais aos que foram declarados no objeto pai. Em outras palavras, permite que o mesmo nome de um método represente vários comportamentos diferentes.</p>
+    <p>Um ponto importante sobre métodos que devemos entender é: o que é uma assinatura de um método?  A assinatura de um método é formada pelo seu <strong>nome</strong> e pelo <strong>tipo</strong>, <strong>quantidade e ordem de seus parâmetros</strong>. Desta forma, é possível que existam na mesma classe, métodos com o mesmo nome, desde que tenham listas de parâmetros diferentes.</p>
+    <pre>
+        <code>
+            calcMedia(number,number){
+                return <span>//alguma expressão</span>
+            }
+            calcMedia(number,number,number){
+                return <span>//outra expressão</span>
+            }
+        </code>
+    </pre>
+    <p>No exemplo de sintaxe acima declaramos dois métodos onde eles compartilham o mesmo none, o mesmo <strong>tipo</strong> de parâmetro (number), mas a <strong>quantidade</strong> de parâmetros é diferente entre eles pois o primeiro método possui dois parâmetros e o segundo método possui três parâmetros. portanto as assinaturas entres eles são diferentes.</p>
+
+    <h3>Tipos de polimorfismo</h3>
+    <p>Na proramação orientada a objetos existem vários tipos de polimorfismo, porém os dois tipos mais importantes e mais usados são: <strong>polimorfismo sobrescrito</strong> e <strong>polimorfismo de sobrecarga</strong>.</p>
+    <dl>
+        <dt>Polimorfismo sobrescrito</dt>
+        <dd>Um método é do tipo sobrescrito quando ele é declarado mais de uma vez com mesmo nome, mesma assinatura. Porém a <strong>expressão de retorno</strong> é modificada no método que foi herdado, o que faz mudar a funcionalidade do método.</dd>
+    </dl>
+    <pre>
+        <code>
+            class MamiferosTerrestres{
+                constructor(especie){
+                    this.especie = especie;
+                }
+
+                locomover(){
+                    return console.log(`${this.especie} se locomove correndo`)
+                }
+            }
+
+            class Cavalo extends MamiferosTerrestres{
+                constructor(especie){
+                    super(especie)
+                }
+                
+                locomover(){
+                    return console.log(`${this.especie} se locomove galopando`)
+                }
+            } 
+        </code>
+    </pre>
+    <dl>
+        <dt>Polimorfismo de sobrecarga</dt>
+        <dd>A sobrecarga de métodos ocorre quando temos vários métodos com o mesmo nome mas com parâmetros diferentes.</dd>
+    </dl>
+    <pre>
+        <code>
+            class Calculadora {
+                constructor(valor1, valor2){
+                   this.valor1 = valor1;
+                   this.valor2 = valor2;
+                }
+             
+                calcMedia(number){
+                return ((this.valor1*number) + (this.valor2*number)) / 2;
+                }
+                
+                calcMedia(number=2){
+                   return ((this.valor1*number) + (this.valor2*number)) / 2;
+                   }
+             }
+        </code>
+    </pre>
     <script src="/exercicios/orientacaoObjeto.js"></script>
+    <script src="/exercicios/polimorfismo.js"></script>
 </html>

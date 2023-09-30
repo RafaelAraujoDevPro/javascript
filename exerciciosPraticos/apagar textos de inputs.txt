@@ -1,0 +1,16 @@
+  Quando o usuário digitar um número nos inputs de nota de trabalho ou nota da prova:
+se (o número digitado for < 0 ou > 10){
+	exibir no placeholder do input: "valor inválido, digite um número entre 0 e 10"
+depois que o usuário apertar o botão salvar, o texto do input deve retornar ao valor
+padrão. 
+
+
+Criar função com condição para anexar nova linha de celulas para a tabela de notas.
+Se (todos os números digitados forem entre >=0 <=10){
+	anexar a nova linha de célula na tabela;
+} Se não:{
+	exibir na label do input: "valor inválido, digite um número entre 0 até 10";
+	a string so deve ser exibida para o input com o valor invalido;
+	depois que o usuário digitar o número correto a string original da label 
+	deve voltar a ser exibida;
+}

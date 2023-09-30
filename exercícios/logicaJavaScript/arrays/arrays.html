@@ -6,28 +6,586 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variáveis Compostas</title>
     <link rel="stylesheet" href="/style/estilo.css">
+    <link rel="stylesheet" href="/style/estiloTable.css">
 </head>
 <body>
-    <h1>Variáveis Compostas</h1>
-    <p>O objeto Array , assim como os arrays em outras linguagens de programação, permite armazenar uma coleção de vários itens sob um único nome de variável e possui membros para realizar operações de array comuns. O array é um vetor que é composto de elementos. Os elementos de um vetor é um par que agrupa o espaço da memória, o valor colocado dentro dele e o índice </p>
-    <figure class="codeSnap">
-        <img src="/img/Array.svg" alt="">
-    </figure>
-    <h2>Descrição</h2>
-    <p>Em JavaScript, os arrays não são primitivos , mas sim Array objetos com as seguintes características principais:</p>
-    <ul>
-        <li><strong>As matrizes JavaScript são redimensionáveis</strong> e podem conter uma mistura de diferentes tipos de dados .</li>
-        <li><strong>As matrizes JavaScript não são matrizes associativas</strong> e, portanto, os elementos da matriz não podem ser acessados usando strings arbitrárias como índices, mas devem ser acessados usando inteiros não negativos (ou sua respectiva forma de string) como índices.</li>
-        <li><strong>Arrays JavaScript são indexados por zero:</strong> o primeiro elemento de um array está em index 0, o segundo está em index 1, e assim por diante — e o último elemento está no valor dapropriedade length menos 1.</li>
-        <li><strong>As operações de cópia de matriz de JavaScript criam cópias rasas</strong> . (Todas as operações de cópia integradas padrão com quaisquer objetos JavaScript criam cópias rasas, em vez de cópias profundas ).</li>
-    </ul>
+    <main class="conteinerMain">
+        <section class="conteinerSection">
+            <h1>Variáveis Compostas</h1>
+            <article class="conteinerArticle">
+                <p>O objeto Array , assim como os arrays em outras linguagens de programação, permite armazenar uma coleção de vários itens sob um único nome de variável e possui membros para realizar operações de array comuns. O array é um vetor que é composto de elementos. Os elementos de um vetor é um par que agrupa o espaço da memória, o valor colocado dentro dele e o índice </p>
+                <figure class="codeSnap">
+                    <img src="/img/Array.svg" alt="">
+                </figure>
+                <p>Em JavaScript, os arrays não são primitivos , mas sim Array objetos com as seguintes características principais:</p>
+                <ul>
+                    <li><strong>As matrizes JavaScript são redimensionáveis</strong> e podem conter uma mistura de diferentes tipos de dados .</li>
+                    <li><strong>As matrizes JavaScript não são matrizes associativas</strong> e, portanto, os elementos da matriz não podem ser acessados usando strings arbitrárias como índices, mas devem ser acessados usando inteiros não negativos (ou sua respectiva forma de string) como índices.</li>
+                    <li><strong>Arrays JavaScript são indexados por zero:</strong> o primeiro elemento de um array está em index 0, o segundo está em index 1, e assim por diante — e o último elemento está no valor dapropriedade length menos 1.</li>
+                    <li><strong>As operações de cópia de matriz de JavaScript criam cópias rasas</strong> . (Todas as operações de cópia integradas padrão com quaisquer objetos JavaScript criam cópias rasas, em vez de cópias profundas ).</li>
+                </ul>
+            </article>
+        </section>
 
-    <h2>Metodos de array</h2>
-    <h3>reverse</h3>
-    <p>O método reverse() inverte uma matriz no lugar e retorna a referência à mesma matriz, o primeiro elemento da matriz agora se tornando o último e o último elemento da matriz tornando-se o primeiro. Ou seja, a ordem dos elementos no array será virada no sentido oposto ao indicado anteriormente. Para inverter os elementos em uma matriz sem alterar a matriz original, deve-se usar o .toReversed(). <strong>Valor de retorno:</strong> a referência à matriz original, agora invertida. Observe que a matriz é invertida no lugar e nenhuma cópia é feita.</p>
-    <figure class="codeSnap">
-        <img src="/img/array-reverse.png" alt="">
-        <img src="/img/array-reverse-resultado.png" alt="">
-    </figure>
+        <section class="conteinerSection">
+            <h2>Metodos de manipulação de objeto array</h2>
+            <article class="conteinerArticle">
+                <p>Os métodos são funções pré-estabelecidas (funções nativas) usadas para realizar operações em objetos, como arrays, strings e objetos. Em JavaScript, os métodos são chamados usando a sintaxe de ponto ".". Por exemplo, o método push() é usado para adicionar elementos a um array. Para usar o método push(), você chamaria o método em um array existente usando a sintaxe de ponto:</p>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const animais = [cachorro,gato,galinha,cobra];
+                            animais.push(boi);
+                        </code>
+                    </pre>
+                </div>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Função de callback em javascript</h3>
+                <p>Uma função callback é uma rotina que é passada como parâmetro para outra função. É esperado então que o método execute o código do argumento em algum momento. A invocação do trecho pode ser imediata, como em um (callback síncrono), ou em outro momento (callback assíncrono). As funções de callback são normalmente implementadas em forma de: sub-rotinas, expressões lambda, blocos de código ou ponteiros de funções.</p>
+                <p>Uma função que recebe outra função como argumento é considerada uma função de ordem maior, em contraste à uma função de primeira ordem. Há de se notar no entanto que existem outros tipos de funções de ordem maior, como as que retornam uma nova função sem receber uma como argumento.</p>
+                <p>Em JavaScript, funções ou métodos são cidadãos de primeira classe representados como objetos <mark>Function</mark> o que significa que podem ser passadas como valores. O método recipiente então pode invocar ou passar o método recebido adiante a qualquer momento.</p>
+                <figure class="codeSnap">
+                    <img src="/img/code-function-callBack.png" alt="">
+                </figure>
+                <h4>Expressões de função</h4>
+                <p>É possível criar funções com expressões em vez de declarações. Isso permite que uma função seja criada no momento de sua invocação ou uso como valor. Desta forma, o exemplo acima poderia ser reescrito da seguinte forma:</p>
+                <figure class="codeSnap">
+                    <img src="/img/callback-expression.png" alt="">
+                </figure>
+                <blockquote>O entendimenpto sobre callback é muito importante quando precisamos manipular objetos do tipo array pois para manipula-los temos que usar com frequência métodos nativos do javascript que são executados com invocação de callbacks.</blockquote>
+            </article>
+            <article class="conteinerArticle">
+                <h3>reverse</h3>
+                <p>O método reverse() inverte uma matriz no lugar e retorna a referência à mesma matriz, o primeiro elemento da matriz agora se tornando o último e o último elemento da matriz tornando-se o primeiro. Ou seja, a ordem dos elementos no array será virada no sentido oposto ao indicado anteriormente. Para inverter os elementos em uma matriz sem alterar a matriz original, deve-se usar o .toReversed(). <strong>Valor de retorno:</strong> a referência à matriz original, agora invertida. Observe que a matriz é invertida no lugar e nenhuma cópia é feita.</p>
+                <figure class="codeSnap">
+                    <img src="/img/array-reverse.png" alt="">
+                    <img src="/img/array-reverse-resultado.png" alt="">
+                </figure>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método map()</h3>
+                <p>O método Array.map() permite iterar sobre um array e modificar seus elementos usando uma função de <mark>callback</mark>. A função de callback será executada em cada um dos elementos do array.</p>
+                <p>Quando usar o map()? Será possível usar map() quando precisarmos mapear ou traduzir todos os elementos de um array e transferir esses elementos para outro conjunto de valores.</p>
+                <p>O que map() faz: percorre o array da esquerda para a direita invocando uma função de retorno em cada elemento com parâmetros. Para cada chamada de retorno, o valor devolvido se torna o elemento do novo array. Depois que todos os elementos foram percorridos, map() retorna o novo array com todos os elementos “traduzidos”.</p>
+                <p>Na função de <mark>callback</mark> do método map() existe uma sequência de representatividade para os seus parâmetros. O primeiro parâmetro representa os elemetos do array matríz. O segundo parâmetro representa o índice da posição dos elementos no array matríz. O terceiro parâmetro representa o objeto array matríz em si. o quarto parâmetro é opcional e seria Objeto que será referenciado como <mark>this</mark> no callback</p>
+                <figure class="codeSnap">
+                    <img src="/img/metodo-map.png" alt="">
+                </figure>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>parâmetro</th>
+                            <th>Significado</th>
+                        </tr>
+                        <tr>
+                            <td><mark>elem</mark></td>
+                            <td>Valor do elemento</td>
+                        </tr>
+                        <tr>
+                            <td><mark>index</mark></td>
+                            <td>Índice em cada iteração da esquerda para direita</td>
+                        </tr>
+                        <tr>
+                            <td><mark>array</mark></td>
+                            <td>Array original <strong>invocando</strong> o método</td>
+                        </tr>
+                        <tr>
+                            <td><mark>thisArg</mark></td>
+                            <td>(opcional) Objeto que será referenciado como this no callback</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método filter()</h3>
+                <p>O método filter() é ao mesmo tempo um método iterativo e um método de cópia. O filter() utiliza funções de callback para iterar sobre um array. O filter() é um método nativo do javascript normalmente usado para realizar filtragem de elementos de um objeto array.</p>
+                <p>O que o método filter() faz? Ele chama uma função callback fosrnecida, <strong>uma vez para cada elemento de uma array matriz</strong>, e constrói um novo array matriz de todos os valores filtrados para os quais a função de callback retornou um valor verdadeiro. Os elementos do array que não passam no teste da função callback não são incluídos no novo array.</p>
+                <p>quando usar o método filter()? Podemos usar o método filter() quando quisermos excluir alguns elementos indesejáveis contidos em um objeto array com base em algumas condições. Em outras palavras, usamos o filter() quando queremos filtrar elementos de arrays.</p>
+                <figure class="codeSnap">
+                    <img src="/img/metodo-filter.png" alt="">
+                </figure>
+                <p>A representatividade dos parâmetros para o método filter() segue as mesma regras da tabela acima.</p>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método reduce()</h3>
+                <p><strong>O que é reduce()</strong>? O reduce() é  <strong>método interativo</strong> para arrays em javascript. <strong>reduce()</strong> é um conceito central na programação funcional, onde não é possível alterar nenhum valor, portanto, para acumular todos os valores em uma matriz, deve-se retornar um novo valor do acumulador a cada iteração. Esta convenção se propaga para JavaScript reduce(): Deve-se usar espalhamento (...spread) ou outros métodos de cópia sempre que possível para criar novas matrizes e objetos como o acumulador, em vez de modificar o existente. Para mutar o acumulador em vez de copiá-lo, lembre-se de ainda retornar o objeto modificado no callback, ou a próxima iteração receberá indefinido.</p>
+                <p>A função de <strong>callbackfn</strong> do reduce() opera usando quatro parâmetros: previousValue, currentValue, currentIndex e array.</p>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>parâmetro</th>
+                            <th>Significado</th>
+                        </tr>
+                        <tr>
+                            <td><mark>previousValue</mark></td>
+                            <td>Valor inicial em ordem crescente do index da matriz, depois da primeira iteração será o valor cumulativo por vez de cada iteração. Será sempre o valor anterior do elemento do array.</td>
+                        </tr>
+                        <tr>
+                            <td><mark>currentValue</mark></td>
+                            <td>Referencia o valor atual do elemento do array.</td>
+                        </tr>
+                        <tr>
+                            <td><mark>currentIndex</mark></td>
+                            <td>Será sempre o valor do index do elemento atual do array.</td>
+                        </tr>
+                        <tr>
+                            <td><mark> array</mark></td>
+                            <td>Referencia o array em que está ocorrendo a iteração do reduce().</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>Ao contrário de outros métodos iterativos , reduce() não aceita um argumento <mark>thisArg</mark>. A função de <mark>callbackFn</mark> é sempre chamado com o this undefined, que é substituído por globalThis se a função de callbackFn não estiver no modo estrito.</p>
+                <p>A função de callbackFn do método reduce() é invocado apenas para índices de matriz que possuem valores atribuídos. Ele não é invocado para slots vazios em matrizes esparsas.</p>
+                <p><strong>O que faz o método reduce()</strong>? O método reduce() executa uma função de <mark>callbackfn</mark> (fornecida pelo usuário) sobre todos os elementos de um array matriz, (um de cada vez) em ordem crescente do seu índice, passando um valor de retorno da função <mark>callbackfn</mark> e acumula o retorno da <mark>callbackFn</mark> em um único valor. Toda vez, o valor de retorno da função de callbackFn é passado novamente na próxima chamada como <mark>cumulativo</mark>. Quando a função de callbackFn faz sua última iteração, o valor acumulado será o valor final do método <mark>reduce()</mark>. Em outras palavras, o reduce() itera sobre uma array e <strong>retorna uma valor reduzido</strong> que, ou foi <strong>somado</strong> ou foi <strong>concatenado</strong> por ele.</p>
+                <p>reduce()não altera a matriz na qual é chamada, mas a função fornecida como callbackFn pode sim altear o array. Observe, no entanto, que o comprimento da matriz é salvo antes da primeira chamada de callbackFn. Portanto:</p>
+                <p>Quando usar o reduce()?</p>
+                <h2>Quando usar map(), filter(), ou reduce()</h2>
+                <p>Qunado é preciso usar métodos para trabalhar com array é importante indentificar qual é o mais indicado para diferentes situações.</p>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>Pincípio</th>
+                            <th>Método</th>
+                        </tr>
+                        <tr>
+                            <td>Se apartir do array for preciso criar um novo array com a mesma quantidade de itens </td>
+                            <td>map()</td>
+                        </tr>
+                        <tr>
+                            <td>Se apartir do array for preciso gerar um novo array com menos itens que o array matriz</td>
+                            <td>filter()</td>
+                        </tr>
+                        <tr>
+                            <td>Se apartir do array for preciso gerar um outro valor que poderá ser diferente de um array.</td>
+                            <td>reduce()</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método forEach()</h3>
+                <p>O que é método forEach()? O método forEach() é um método iterativo para gerar efeito colateral (ou ação de iteração) para cada elemento de um array matriz. Traduzindo a expressão for each do inglês, singnifica: "para cada". O forEach(), precisa receber como parâmetro uma função de callbackFn (obrigatório) e também pode reber um argumento <mark>this</mark>. A função de callbackFn recebe os mesmos parâmetros da tabela de parâmetros dos metodos map() e filter(): elemento(obrigatório), index(opcional), array(opcional) e thisArgumento(opcional). O forEach() foi pensado para executar <strong>efeito colateral</strong> em elementos de array.</p>
+                <P></P>
+                <p>O que o método forEach() faz? O forEach() chama uma função de callbackFn fornecida <strong>uma vez para cada elemento </strong>em um array matriz, em ordem crescente de índice. Ao contrário de map(), forEach() sempre retornará o valor <mark>undefined</mark> e não pode ser encadeado. A função de callbackFn é invocada apenas para os índices de array matriz que possuem valores atribuídos. Ele não é invocado para slots vazios em matrizes esparsas. O método forEach() é genérico. Ele espera apenas que o valor this tenha uma propriedade length e propriedades de chave inteira.</p>
+                <p>forEach() não altera a matriz na qual ele é chamado, mas a função fornecida como callbackFn pode resultar em uma efeito colateral. Observe, no entanto, que o comprimento da matriz é salvo antes da primeira chamada de callbackFn. Portanto:</p>
+                <ul>
+                    <li>A função de callbackFn não visitará nenhum elemento adicionado depois do comprimento inicial da matriz quando a chamada do forEach() for inicializada.</li>
+                    <li>Alterações em índices que já foram iterados pelo forEach() não fará com que a função de callbackFn seja invocada novamente.</li>
+                    <li>Se um elemento existente na matriz que ainda não foi visitado, for alterado pela função de callbackFn, seu valor passado para a callbackFn será o valor no momento em que esse elemento for visitado. Elementos excluídos não são visitados pelo forEach().</li>
+                </ul>
+                <p>Quando usar o método forEach()? O caso de uso típico é executar efeitos colaterais no final de uma cadeia de elementos dentro de um array. Ou seja, quando precisar que uma função execute uma ação em todos os elementos um array matriz. Não há como parar ou interromper um loop forEach() a não ser lançando uma exceção. Se for preciso de tal comportamento, o método forEach() é a ferramenta errada. O método forEach() espera uma função síncrona — não espera por promessas(ou funções assíncronas).</p>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método includes()</h3>
+                <p>O que é o método includes()? O includes() é um método de iteração que verifica se existe um valor especificado para ele, dentro de um array, e retorna um boleano "true" ou "false" como valor. O includes() é um método genérico. Ele espera apenas que o valor this tenha uma propriedade length e propriedades de chave inteira. O includes() trabalha com dois parâmetros: searchElement, e fromIndex. </p>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>parâmetro</th>
+                            <th>Significado</th>
+                        </tr>
+                        <tr>
+                            <td><mark>searchElement</mark></td>
+                            <td>Referencia o valor que vai ser pesquisado dentro de um array ou bjeto.</td>
+                        </tr>
+                        <tr>
+                            <td><mark>fromIndex</mark></td>
+                            <td>Índice baseado em zero, no qual o vai começar a pesquisa do valor especificado, se o valor esta contido dentro de um array. Convertido em um número inteiro .</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>O que o método includes() faz? O método includes() faz uma iteração sombre cada elemento de um array e compara o elemento atual com o valor especificado para ele como argumento. Se o valor especificado for encontrado contido no array (ou parte do vetor determido pelo <strong>fromIndex</strong>) ou no objeto, então o método retornará "true". Já se nada igual for encontrado, retornará "false". Quando usado em arrays esparsos , o método includes() itera slots vazios como se eles tivessem o valor undefined.</p>
+                <h3>Sintaxe</h3>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const arrayNumbers = [4,23,5,65,6,7,];
+                            const contemNum = arrayNumbers.includes(23, 1);
+                            console.log(contemNum);
+                            Run: true
+                        </code>
+                    </pre>
+                </div>
+                <p>Quando o método includes() iterar sobre um array esparso, e quisermos verificar se há elemento com valor vazio neste array, podemos especificar "<mark>undefined</mark>" como argumento. Se includes() encontrar espaço vazio, retornará "true".</p>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const arr = [3, , 5, 6];
+                            arr.includes(undefined);
+                            Run: true
+                        </code>
+                    </pre>
+                </div>
+                <p>Quando usar o método includes()? Um bom uso para o método includes() é quando precisamos verificar algo em um array e retornar um valor boleano  para uma estrutura condicional como <strong>if()...else()</strong> ou também para um método que precise de um bolean, como o método <mark>filter()</mark>.</p>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const nomes = ['Rafael', 'João', 'José', 'Maria', 'Rebeca'];
+                            const nomesComR = nomes.filter((nome)=>nome.includes('R'));
+                            console.log(nomesLetraR);
+                
+                            Run: [ 'Rafael', 'Rebeca' ]
+                        </code>
+                    </pre>
+                </div>
+                <p>Outro caso em que podemos utilizar o método includes() é quando precisamos refatorar um trecho de código que faz verificações seguidas usando o operador or(||);</p>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const multiplicar = (arg1,arg2,arg3) => {
+                            //const argUndefined = arg1 || arg2 || arg3 === undefined;
+                            // refatorando:
+                            const argUndefined = [arg1,arg2,arg3].includes(undefined);
+                                argUndefined ?'Insira todos os argumentos': a*b*c;
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método every()</h3>
+                <p>O que é o método every()? O <dfn>every()</dfn> (que significa adjetivo "toda") é um método iterativo que recebe uma função de callbackFn para verificar se todos os elementos de uma matriz passam no teste passado para a callbackFn. A função de callback pode receber até quatro parâmetros: element, index,  array e thisArg (opcional).</p>
+                <h4>Sintaxe</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            Every(callbackFn =>{...//teste da callback})
+                            Every(callbackFn =>{...//teste da callback}, thisArg)
+                        </code>
+                    </pre>
+                </div>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>parâmetro</th>
+                            <th>Significado</th>
+                        </tr>
+                        <tr>
+                            <td><mark>element</mark></td>
+                            <td>O elemento atual da matriz que será testado pela callbackFn</td>
+                        </tr>
+                        <tr>
+                            <td><mark>index</mark></td>
+                            <td>Índice em cada iteração da esquerda para direita</td>
+                        </tr>
+                        <tr>
+                            <td><mark>array</mark></td>
+                            <td>Array original <strong>invocando</strong> o método</td>
+                        </tr>
+                        <tr>
+                            <td><mark>thisArg</mark></td>
+                            <td>(opcional) Objeto que será referenciado como this no callback</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>O método every() <strong>retorna </strong> um valor boleano de acordo com o teste da callbackFn. Se a callbackFn retorna true para o teste em cada elemento da matriz o <strong>every()</strong> retorna <mark>true</mark>, caso contrário, <strong>every()</strong> retorna false.</p>
+                <p>O que o método Every() faz? Ele chama uma função callbackFn fornecida, uma vez para cada elemento em uma matriz, até a callbackFn retornar um valor falso. Se tal elemento for encontrado, <strong>every()</strong> retorna imediatamente false e para de iterar na matriz. Caso contrário, se callbackFn retornar um valor verdadeiro para todos os elementos, <strong>every()</strong> retornará true. O every() age como o quantificador "para todos" em matemática. Em particular, para uma matriz vazia, ele retorna true. (É uma verdade vaga que todos os elementos do conjunto vazio satisfazem qualquer condição dada). </p>
+                <p>A função de callbackFn do every() é invocado apenas para índices de matriz que possuem valores atribuídos. Ela não é invocada para slots vazios em matrizes esparsas. O every() não altera a matriz na qual é chamada, mas a função fornecida como callbackFn pode alterar-la.</p>
+            </article>
+        </section>
+        <section class="conteinerSection">
+            <h2>Métodos de inserção e remoção de elementos em array</h2>
+            <article class="conteinerArticle">
+                <h3>Método push()</h3>
+                <p>Oque é o método Push()? O push() (que traduzido significa "empurrar") é um método mutante, ou seja, ele pode transformar o array matriz. Ele altera o comprimento e o conteúdo de this. O método push() aceita um argumento como parâmetro: (elementN). Este parâmetro referencia O(s) elemento(s) a serem adicionados ao final da matriz. O push() é um método genérico, Ele espera apenas que o <mark>valor do this</mark> tenha uma propriedade length e propriedades de chave inteira. Embora as <em>strings</em> também sejam semelhantes a arrays, esse método não é adequado para ser aplicado nelas, pois as strings são imutáveis. O método push() depende da propriedade length para determinar onde começar a inserir os valores.</p>
+                 <h4>Sintaxe</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            arr.push ( );
+                            arr.push ( elemento0 );
+                            arr.push ( elemento0 , elemento1 );
+                            arr.push ( elemento0 , elemento1 ,  /* … ,*/ elementoN );
+                        </code>
+                    </pre>
+                </div>
+                <p>O que o método push() faz? O método push() adiciona elementos especificados como argumento de seu parâmetro (elementN) para o  final de uma array matriz e retorna o novo comprimento da matriz. Caso a propriedade <mark>length</mark> não possa ser convertida em número, é utilizado 0 como índice. Isto inclui a possibilidade de length não existir, nesse caso, essa propriedade será criada.</p>
+                <h4>Exemplo</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            let arrKeysUser = ['name', 'age', 'andress'];
+                            let arrKeysUserId = arrKeysUser.push('id');
+                            console.log(arrKeysUser);
+                            console.log(arrKeysUserId);// retorna o novo length
+                            //run: 4
+                            //run: ['name', 'age', 'andress','id']
+                        </code>
+                    </pre>
+                </div>
+                <p>Quando usar o método push? O método push() pode ser útil para icicializar o comprimento de um array vazio. Também é usado pra adicionar elementos novos para um array matriz. Outra vantagem do método push() é que usando ele junto com o método call() ou apply() nós podemos fazer a fusão de dois arrays em um só.</p>
+                <p>Exemplo de push() com apply() seguindo apartir do exemplo acima:</p>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            let moreKeysUsers = ['last-name', 'gender', 'profession'];
+                            Array.prototype.push.apply(arrKeysUser, moreKeysUsers);
+                            console.log(arrKeysUser);
+                            // run: [ 'name', 'age', 'andress', 'id', 'last-name', 'gender', 'profession' ]
+                        </code>
+                    </pre>
+                </div>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método shift()</h3>
+                    <p>O que é o método shift()? O shift() é um método do mutante pois quando ele é executado sobre um array o comprimento do array é alterado. O método shift() não espera por argumento, e ele terá um retorno. O retorno de shift() será o elemento a ser removido no índice [0] do array.</p>
+                    <p>O shift() é um método genérico . Ele espera apenas que o valor <mark>this</mark> tenha uma propriedade length e propriedades de chave inteira. Embora as strings também sejam semelhantes a arrays, esse método não é adequado para ser aplicado nelas, pois as strings são imutáveis.</p>
+                    <p>O que o método shift() faz? O método shift() remove o elemento no índice zero e desloca os valores em índices consecutivos para baixo e, em seguida, retorna o valor removido. Se a propriedade length for 0, undefined É retornado.</p>
+                    <h4>Sintaxe</h4>
+                    <div class="conteinerExemples">
+                        <pre>
+                            <code>
+                                arr.shift();
+                            </code>
+                        </pre>
+                    </div>
+                    <h4>Exemplo</h4>
+                    <div class="conteinerExemples">
+                        <pre>
+                            <code>
+                                let user1 = ['name', 'age', 'gender', 'address', 'id'];
+                                const userName = user1.shift();
+                                console.log(user1);
+                                console.log(userName);
+                                //run: ['age', 'gender', 'address', 'id']
+                                //run: name
+                            </code>
+                        </pre>
+                    </div>
+            </article>
+            
+            <article class="conteinerArticle">
+                <h3>Método unshift()</h3>
+                <p>O que é o método unshift()? O unshift() é um método mutante com a funcionalidade de adicionar elementos para um array apartir do ìndice [0]. Ele aceita argumentos para o seu parâmetro (elementN). Podemos adicionar mais de um elemento para o seu parâmetro em apenas uma execução do método unshifit(). O método unshifit() retorna um novo tamanho do <mark>length</mark> para o array.</p>
+                <p> O método unshift() é intencionalmente genérico. Este método pode ser chamado via <mark>call</mark> ou <mark>apply</mark> em objetos que se assemelham aos arrays. Objetos que não contêm uma propriedade length que reflete a última de uma série consecutiva de propriedades numéricas, iniciadas por 0, podem não se comportar-se de maneira significativa.</p>
+                <h4>Sintaxe</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            unshift(ElementN)
+                            unshift ( elemento0 )
+                            unshift ( elemento0 , elemento1 )
+                            unshift ( elemento0 , elemento1 ,  /* … ,*/ elementoN )
+                        </code>
+                    <pre>
+                </div>
+                <h4>Exemplo</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const arrUnshift = [4,6,7,3];
+                            arrUnshift.unshift('primeiro',true,10);
+                            console.log(arrUnshift);
+                            //run: [ 'primeiro', true, 10, 4, 6, 7, 3 ]
+                            arrUnshift.splice(0,3); //reseta o array para os valores inciais.
+                            arrUnshift.unshift('primeiro');
+                            arrUnshift.unshift('true');
+                            arrUnshift.unshift(10);
+                            console.log(arrUnshift);
+                            //run: [ 10, 'true', 'primeiro', 4, 6, 7, 3 ]
+                            arrUnshift.splice(0,3); //reseta o array para os valores inciais.
+                            arrUnshift.unshift({name:'Rafael'},['age','address']);
+                            console.log(arrUnshift);
+                            //run: [ { name: 'Rafael' }, [ 'age', 'address' ], 4, 6, 7, 3 ]
+                        </code>
+                    </pre>
+                </div>
+
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método splice()</h3>
+                <p>O que é o método splice()? O splice() (significa emendar) é um método mutante pois pode alterar tanto o conteúdo de this quanto o <mark>length</mark> do array. Se o número especificado de elementos a serem inseridos for diferente do número de elementos que estão sendo removidos, o <mark>length</mark> do array  também será alterado. O método splice() rebebe argumentos especificos para seu parâmetro. </p>
+                <h4>Sintaxe</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            arr.splice(indiceStart)
+                            arr.splice(indiceStart, deleteCount)
+                            arr.splice(indiceStart, deleteCount, elementN)
+                            arr.splice(indiceStart, deleteCount, elementN, ...elementN)
+                        </code>
+                    </pre>
+                </div>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>Parâmetro</th>
+                            <th>Descrição do Parâmetro</th>
+                        </tr>
+                        <tr>
+                            <td><mark>indiceStart</mark></td>
+                            <td>Índice baseado em [0], no qual deve começar a alterar a matriz.
+                                <ul>
+                                    <li>O índice negativo conta a partir do final da matriz — se <mark>indiceStart</mark> < 0, <mark>indiceStart</mark> + array.length será usado.</li>
+                                    <li>Se <mark>indiceStart</mark> < -array.length, 0 é usado.</li>
+                                    <li>Se <mark>indiceStart</mark> >= array.length, nenhum elemento será excluído, mas o método se comportará como uma função de adição, adicionando quantos elementos forem fornecidos.</li>
+                                    <li>Se <mark>indiceStart</mark> for omitido (e splice()for chamado sem argumentos), nada será excluído. Isso é diferente de passar undefined, que é convertido em 0.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><mark>deleteCount</mark></td>
+                            <td>Um número inteiro que indica o número da quantidade de elementos a serem removidos na matriz apartir do <mark>indiceStart</mark>.
+                            <ul>
+                                <li>Se o <mark>deleteCount</mark> for === <mark>Infinity</mark>, ou,  se <mark>deleteCount</mark> >= ao número de elementos após a posição especificada por <mark>indiceStart</mark>, todos os elementos apartir de <mark>indiceStart</mark> até o final do array serão deletados.</li>
+                                <li>Se <mark>deleteCount</mark> for 0, undefined ou número negativo, nenhum elemento será removido. Nesse caso, deve-se especificar pelo menos um novo elemento para adicionar apartir de <mark>indiceStart</mark>.</li>
+                            </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><mark>...elementsN</mark></td>
+                            <td>Referência os novos elementos para serem adicionados à matriz, começando apartir do <mark>indiceStart</mark>.
+                                <ul>
+                                    <li>Se nenhum elemento for especificado, o método splice() apenas removerá elementos da matriz.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>O método splice() tem valor de retorno. Ele retorna um array com o valor dos elementos que forem removidos da matriz. Se apenas um elemento for removido, uma matriz de um elemento será retornada. Se nenhum elemento for removido, uma matriz vazia será retornada.</p>
+                <p>O que o método splice() faz ? O splice() altera o conteúdo de uma matriz removendo ou substituindo elementos existentes e/ou adicionando novos elementos no local .</p>
+                <h4>Exemplos</h4>
+                <p>Remover 0 (zero) elementos antes do índice 2 e insirir "tambor"</p>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const myFish =  [ "anjo" ,  "palhaço" ,  "mandarim" ,  "esturjão" ] ;
+                            const arraySplice = myFish.splice(2, undefined, 'tambor');
+                            console.log(myFish);
+                            console.log(arraySplice);
+                            //run: [ 'anjo', 'palhaço', 'tambor', 'mandarim', 'esturjão' ]
+                            //run: []
+                        </code>
+                    </pre>
+                </div>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método fill()</h3>
+                <p>O que é o método fill()? O fill() (significa preencher) é um método mutante, porém ele não altera o comprimento de this, mas alterará o conteúdo de this. O método fill() também preenche slots vazios em arrays esparsos pois slots vazios recebem valor <mark>underfined</mark> e se tem algum valor existente o fill() pode modificar este valor. O método fill() trabalha com três parâmetros: <mark>value</mark>, <mark>indiceStart</mark> e <mark>indiceEnd</mark>.</p>
+                <h4>Sintaxe</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            Array.fill(vaule);
+                            Array.fill(vaule, indiceStart);
+                            Array.fill(vaule ,indiceStart, indiceEnd);
+                        </code>
+                    </pre>
+                </div>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>Parâmetro</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td><mark>value</mark></td>
+                            <td>Referência o valor com o qual irá preencher a matriz. Todos os elementos na matriz terão este mesmo valor exato: porém se value for um objeto, cada slot na matriz fará referência a esse objeto.</td>
+                        </tr>
+                        <tr>
+                            <td><mark>indiceStart</mark></td>
+                            <td>Índice baseado em zero, apartir do qual vai iniciar o preenchimento, convertido em um número inteiro.
+                                <ul>
+                                    <li>O índice negativo conta a partir do final da matriz. &rarr; Se <mark>indiceStart</mark> < 0, <mark>indiceStart</mark> + array.length será usado.</li>
+                                    <li>Se <mark>indiceStart</mark> < -array.length ou <mark>indiceStart</mark> for omitido, 0 é usado.</li>
+                                    <li>Se <mark>indiceStart</mark> >= array.length, nenhum índice é preenchido.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><mark>indiceEnd</mark></td>
+                            <td>Índice baseado em zero no qual irá terminar o preenchimento, convertido em um número inteiro. O fill() preenche até o <mark>indiceEnd</mark>, mas não inclui <mark>indiceEnd</mark>.
+                            <ul>
+                                <li>O índice negativo conta a partir do final da matriz — se <mark>indiceEnd</mark> < 0, <mark>indiceEnd</mark> + array.length será usado.</li>
+                                <li>Se <mark>indiceEnd</mark> < -array.length, 0 é usado.</li>
+                                <li>Se <mark>indiceEnd</mark> >= array.length ou <mark>indiceEnd</mark> for omitido, array.length é utilizado, fazendo com que todos os índices até o final sejam preenchidos.</li>
+                                <li>Se <mark>indiceEnd</mark> estiver posicionado antes ou <mark>indiceStart</mark> depois da normalização, nenhum índice é preenchido.</li>
+                            </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>O que o método fill() faz? O fill() altera todos os elementos em uma matriz para um valor estático, de um índice inicial (padrão 0) para um índice final (padrão array.length). O método fill() retorna A matriz modificada, preenchida com <mark>value</mark>.</p>
+                <h4>Exemplo</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const arraySalario = Array(7);
+                            arraySalario.fill('Salário',0);
+                            console.log(arraySalario);
+                            //run: [
+                                    'Salário', 'Salário',
+                                    'Salário', 'Salário',
+                                    'Salário', 'Salário',
+                                    'Salário'
+                                    ]
+                        </code>
+                    </pre>
+                </div>
+            </article>
+            <article class="conteinerArticle">
+                <h3>Método slice()</h3>
+                <p>O que é o método slice()? O slice() (que significa fatiar) é um método de cópia. Ele não altera, this mas, em vez disso, retorna uma cópia superficial que contém alguns dos mesmos elementos do array original. O método slice() preserva slots vazios. Se a parte fatiada for esparsa, a matriz retornada também será esparsa. O método slice() é genérico. Ele espera apenas que o  valor do this tenha uma propriedade length e propriedades de chave inteira. O slice() recebe parâmetros: indexStart e o indexEnd.</p>
+                <h4>Sintaxe</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            .slice()
+                            .slice(indexStart)
+                            .slice(indexStart, indexEnd)
+                        </code>
+                    </pre>
+                </div>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>Parâmetro</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td><mark>indexStart</mark></td>
+                            <td>Índice baseado em zero no qual irá iniciar a extração, convertido em um número inteiro.
+                                <ul>
+                                    <li>O índice negativo conta a partir do final da matriz &rarr; se <mark>indexStart</mark> < 0, <mark>indexStart</mark> + array.length será usado.</li>
+                                    <li>Se <mark>indexStart</mark> < -array.lengthou <mark>indexStart</mark> será omitido, e 0 é usado.</li>
+                                    <li>Se <mark>indexStart</mark> >= array.length, nada será extraído.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><mark>indexEnd</mark></td>
+                            <td>Índice baseado em zero no qual irá terminar a extração, convertido em um número inteiro. slice() extrai até o <mark>indexEnd</mark>, mas não incluindo o <mark>indexEnd</mark>.
+                                <ul>
+                                    <li>O índice negativo conta a partir do final da matriz — se <mark>indexEnd</mark> < 0, <mark>indexEnd</mark> + array.length será usado.</li>
+                                    <li>Se <mark>indexEnd</mark> < -array.length, 0 será usado.</li>
+                                    <li>Se <mark>indexEnd</mark> >= array.length ou <mark>indexEnd</mark> for omitido, array.length é utilizado, fazendo com que todos os elementos até o final sejam extraídos.</li>
+                                    <li>Se <mark>indexEnd</mark> estiver posicionado antes ou indexStart depois da normalização, nada é extraído.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>O valor de retorno do método slice() será um array de cópias dos elementos selecionados  por ele.</p>
+                <p>O que o método slice() faz? O método slice() retorna uma cópia superficial de uma parte de uma matriz em um novo objeto de matriz selecionado de indexStart para indexEnd ( indexEnd não incluído) onde indexStart e indexEnd representam o índice de itens nessa matriz. A matriz original não será modificada.</p>
+                <h4>Exemplo</h4>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const bandasAno60 = ['Pink Floyd','Deep Purple','Black Sabbath','Led zeplin'];
+                            const bandaPinkFloyd = bandasAno60.slice(0,1);
+                            console.log(bandaPinkFloyd);
+                            //run: ['Pink Floyd']
+                        </code>
+                    </pre>
+                </div>
+            </article>
+        </section>
+        <script src="/logicaJavaScript/arrays/metodArray.js"></script>
+        <script src="/logicaJavaScript/arrays/reduce.js"></script>
+        <script src="/logicaJavaScript/arrays/exercicioArrays.js"></script>
+        <script src="/logicaJavaScript/arrays/forEach.js"></script>
+        <script src="/logicaJavaScript/arrays/includes.js"></script>
+    </main>
 </body>
 </html>

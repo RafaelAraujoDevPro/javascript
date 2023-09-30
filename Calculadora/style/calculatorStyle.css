@@ -1,0 +1,148 @@
+@charset 'UTF-8';
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+:root {
+  --fundo: #091502;
+  --corDeTeclas: #272926;
+  --corDeNumero: #edf1e7;
+  --corDasOperacoes: #70eb0a;
+  --hoverTeclado: #a9a9a9d4;
+  --fontHover: 1.3em;
+}
+body {
+  background-image: url("/img/fundoDaCaluculadora.jpg");
+  display: grid;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+}
+
+.clean_history > button > .color-green,
+.teclado_digitacao > .color-green {
+  color: var(--corDasOperacoes);
+}
+
+.conteiner_calc {
+  width: 20rem;
+  height: 38rem;
+  color: var(--corDeNumero);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  background-color: var(--fundo);
+  padding: 0.5rem 1rem 2rem 1rem;
+  border-radius: 1rem;
+}
+.conteiner_calc h1 {
+  text-align: center;
+}
+.tela_visualizacao {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: flex-end;
+  border-bottom: solid 2px var(--corDeTeclas);
+  padding-bottom: 1rem;
+}
+.tela_visual {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-right: 1rem;
+}
+.tela_visual span[data-anterior] {
+  color: var(--corDasOperacoes);
+}
+
+/* @keyframes efeitoExcrever {
+    0% {border-right: solid 3px var(--corDeNumero)};
+    100% {border-right: solid 3px #80cd4000};
+} */
+
+.clean_history {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.clean_history button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #80cd4000;
+  transition: background-color 350ms linear;
+}
+.clean_history button span {
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 2em;
+  color: var(--corDeNumero);
+}
+/* .clean_history button:last-child span{
+    color: var(--corDasOperacoes);
+} */
+.clean_history button:hover {
+  background-color: var(--hoverTeclado);
+  cursor: pointer;
+}
+.teclado_digitacao {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 3.5rem);
+  grid-template-rows: repeat(5, 3.5rem);
+  grid-gap: 0.5rem 1rem;
+  padding-top: 1.5rem;
+}
+.teclado_digitacao > .btn_style:first-child {
+  color: #f46060;
+}
+.btn_style {
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+  background-color: var(--corDeTeclas);
+  color: var(--corDeNumero);
+  font-size: 2em;
+  transition: font-size 350ms linear,
+               background-color 350ms linear;
+  
+  box-shadow: inset 0px 0px 20px 5px #f3f8ed0a;
+}
+.btn_style:hover {
+  font-size: var(--fontHover);
+  background-color: var(--hoverTeclado);
+  cursor: pointer;
+}
+
+#igual {
+  grid-column: 3/5;
+  grid-row: 5/6;
+  border-radius: 40%;
+  border-radius: 45%;
+}
+#igual {
+  background-color: var(--corDasOperacoes);
+  transition: background-color, font-size 350ms linear;
+  box-shadow: inset 0px 0px 30px 5px #16220896;
+}
+#igual:hover {
+  font-size: var(--fontHover);
+  background-color: #aebf9f;
+}

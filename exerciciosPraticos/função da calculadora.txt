@@ -1,0 +1,7 @@
+  criar função que faça : 
+  quando clickar no botão do dígitos exibir esse dígito no mostrador
+  quando clickar os botões em sequência os digitos devem concatenar para formar um número.
+  quando clickar em botão de um operador matemático que não seja o sinal de igual (=), 
+então para de concatenar e iniciar outra sequência de concatenação.
+  
+

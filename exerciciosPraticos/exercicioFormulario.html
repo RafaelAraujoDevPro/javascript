@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício de estrurura de repetição</title>
-    <link rel="stylesheet" href="/style/estiloTable.css">
+    <link rel="stylesheet" href="/estiloTable.css">
 </head>
 <body>
     <section class="grid-conteiner">
@@ -19,7 +19,7 @@
                     <th>Média</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="corpoTabela">
                 <tr class="t_aluno" id="trAluno">
                     <td class="td_nome">Patrícia</td>
                     <td class="td_trabalho">5.5</td>
@@ -30,7 +30,7 @@
                     <td class="td_nome">João</td>
                     <td class="td_trabalho">7.0</td>
                     <td class="td_prova">4.0</td>
-                    <td class="td_media">5.5</td>
+                    <td class="td_media">0</td>
                 </tr>
                 <tr class="t_aluno">
                     <td class="td_nome">Fernanda</td>
@@ -71,17 +71,18 @@
         <form id="formAluno">
             <div class="form-conteiner">
                 <div class="nome">
-                    <label for="textNomeId" class="rotulo">Nome:</label><br>
+                    <label for="textNomeId" class="rotulo" id="rotulo_nome">Nome do aluno:</label><br>
                     <input type="text" id="textNomeId" name="textNome" placeholder="Informe o nome do aluno" maxlength="50" required class="nome-aluno">
                 </div>
                 <div class="trabalho">
-                    <label for="notaTrabalhoId" class="rotulo">Nota do trabalho:</label><br>
+                    <label for="notaTrabalhoId" class="rotulo" id="rotulo_trablho">Nota do trabalho:</label><br>
                     <input type="number" id="notaTrabalhoId" name="notaTrabalho" placeholder="Nota do trabalho" required class="nome-aluno" step="0.1">
                 </div>
                 <div class="prova">
-                    <label for="notaProvaId" class="rotulo">Nota da prova:</label><br>
+                    <label for="notaProvaId" class="rotulo" id="rotulo_prova">Nota da prova:</label><br>
                     <input type="number" placeholder="Nota da prova" id="notaProvaId" name="notaProva" required class="nome-aluno" step="0.1">
                 </div>
+
                 <di class="btn" >
                     <button type="submit" id="btnId">Salvar</button>
                 </div>
@@ -92,9 +93,6 @@
     <div id="listar">
 
     </div>
-    <script src="/exercicios/calcula-media.js" defer>
-    </script>
-    <script src="/exercicios/formulary.js" defer></script>
-    <script src="/exercicios/refatorandoMedia.jsS" defer></script>
+    <script src="refatorandoMedia.js" defer></script>
 </body>
 </html>

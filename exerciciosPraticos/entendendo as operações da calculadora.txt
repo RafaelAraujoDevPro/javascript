@@ -1,0 +1,4 @@
+Como deve funcionar as operações na calculadora?
+coletar o primeiro número e armazenar em uma variável
+coletar o segundo número e armazenar em outra variável
+colacar essas variáveis em uma função que realize a operação matemática.

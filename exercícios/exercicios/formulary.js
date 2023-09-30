@@ -1,4 +1,4 @@
-/*Este arquivo terá a finalidade de criar um funcionalidade de obter os dados digitados no formulário e depois adicionar esses dados em novas linhas da tabela de notas. */
+/*Este arquivo terá a finalidade de criar uma função para obter os dados digitados no formulário e depois adicionar esses dados em novas linhas da tabela de notas. */
 
 //Obter o elemento 'button' Salvar
 //Obter o campo de digitação do 'input' referente ao nome de aluno;
@@ -6,10 +6,10 @@
 //Obter o compo de digitação do 'input' referente a nota de prova;
 //Adicionar para o elemento 'button' um evento de 'click' para chamar uma função
 //A função deverá pegar os dados digitados nos campos dos  'input´s'
-//Obter referência de do corpo da tabela: 'tbody'
+//Obter referência do corpo da tabela: 'tbody'
 // Criar elemento 'tr'
 //Criar 4 elementos 'td' 
-//Adicionar dados em cada elemento 'td' que viram dos 3 'input´s já obtidos e mais um dado de vaor '0'
+//Adicionar dados em cada elemento 'td' que viram dos 3 'input´s já obtidos e mais um dado de valor '0'
 //Colocar as 'td' dentro do elemento 'tr'
 //Colocar a 'tr' dentro do element 'table'
 //Fazer APAGAR o conteúdo dos 'input´s' depois que apertar o botão "salvar"
@@ -104,9 +104,7 @@ btnSalvar.addEventListener("click", function(event) {
                }       
       } else {
          invalido();
-         // novaCelulaTrab.innerHTML = "Valor inválido"  
-         // novaCelulaProv.innerHTML = "Valor inválido"  
-         // novaCelulaMedia.innerHTML = "Valor inválido"  
+         
       }
 
       //Condição para estilizar a célula de nota de "trabalho"
@@ -138,9 +136,6 @@ btnSalvar.addEventListener("click", function(event) {
                }
       } else {
          invalido()
-            // novaCelulaTrab.innerHTML = "Valor inválido";
-            // novaCelulaProv.innerHTML = "Valor inválido";
-            // novaCelulaMedia.innerHTML = "Valor inválido"
       }
 
       //Condição para estilizar a célula de nota de "prova"

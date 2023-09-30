@@ -1,0 +1,6 @@
+Projeto Calculadora:
+
+a calculadora deverá receber no máximo de 15 digitos para representar um numero.
+
+o tamanho inicial dos caracteres terá um font-size indicial até quando atingir 12 digitos
+depois de 12 digitos os caracteres diminuem o font-size.

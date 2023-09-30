@@ -205,7 +205,7 @@ function soma1(...pRest) {
 console.log(soma1(10, 20, 30, 40));
 
 // ******* Function Generator ******
-debugger
+
 function* fGeradora() {
     yield 'azul'
     yield 'verde'

@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Literal</title>
+    <link rel="stylesheet" href="/style/estilo.css">
+    <link rel="stylesheet" href="/style/estiloTable.css">
+</head>
+<body>
+    <main class="conteinerMain">
+        <h1>Objeto Literal</h1>
+        <section class="conteinerSection">
+            <article class="conteinerArticle">
+                <h2>O que é um objeto literal?</h2>
+                <P>Objeto literal pode ser entendido como uma variável composta que armazena uma coleção de dados. Estes dados são agrupados em pares de um <mark>valor</mark> sendo referênciado por um <mark>nome</mark>. Já estes pares podem são chamados de <strong>propriedades</strong> ou <strong>atributos</strong> que são associadas ao objeto literal. Estas propriedades podem ser entendidas como variáveis normais que são ligadas ao objeto. Elas podem ser  acessada em outras partes do programa externa ao objeto para serem utilizadas. </P>
+                <p>Um objeto JavaScript é um mapeamento entre keys(chave) e values(valor). Chaves são strings (ou símbolos), e o valor pode ser qualquer coisa. As propriedades podem receber qualquer tipo de dados do javascript como valor; tanto dados primitivos quanto dados por referência. Propriedades não definidas de um objeto tem o valor de <mark>undefined</mark> (e não <mark>null</mark>.)</p>
+                <div class="cntTable">
+                    <table class="l_table">
+                        <tr>
+                            <th>Tipos de dados primitivos</th>
+                            <th>tipos de dados por referência</th>
+                        </tr>
+                        <tr>
+                            <td>Numbers</td>
+                            <td>Todos o tipos de objetos</td>
+                        </tr>
+                        <tr>
+                            <td>Strings</td>
+                            <td>Objetos literais</td>
+                        </tr>
+                        <tr>
+                            <td>Boleans</td>
+                            <td>Arrays</td>
+                        </tr>
+                        <tr>
+                            <td>Null</td>
+                            <td>Funções</td>
+                        </tr>
+                        <tr>
+                            <td>Undefined</td>
+                            <td>Datas</td>
+                        </tr>
+                        <tr>
+                            <td>Symbol</td>
+                            <td>Todos os outros objetos</td>
+                        </tr>
+                        <tr>
+                            <td>BigInt</td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Exemplo de Sintaxe</h3>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const obj = {
+                                prop1: 'valor1',
+                                prop2: 'valor2',
+                                prop3: 'valor3',
+                                ...
+                            };
+                        </code>
+                    </pre>
+                </div>
+            </article>
+        </section>
+        <section class="conteinerSection">
+            <article class="conteinerArticle">
+                <h2>Inicializador de objetos</h2>
+                <p>Um inicializador de objetos é uma expressão que descreve a inicialização de um arquino <em>object</em>. Para iniciar um objeto em um programa de javascript podemos utilizar <mark>Object.create()</mark>, <mark>new Object()</mark>, uma função construtora invocada com o operador <mark>new</mark> ou ainda declarar o objeto com a notação literal.</p>
+                <h3>New Object()</h3>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            let car1 = new Object();
+                            car1.color = 'azul';
+                            car1.price = 80000;
+                            car1.model = 'Gol G7';
+                            car1.brand = 'VW';
+                            console.log(car1);
+                            // run:
+                              {
+                                color: 'azul',
+                                price: 80000,
+                                model: 'Gol G7',
+                                brand: 'VW'
+                              }
+                        </code>
+                    </pre>
+                </div>
+                <h3>Função construtora</h3>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            function Car (color,price,model,brand) {
+                                this.color = color;
+                                this.price = price;
+                                this.model = model;
+                                this.brand = brand;
+                                this.info = ()=>{
+                                    return `Carro ${this.brand} ${this.model} na cor ${this.color} esta custando ${this.price}`
+                                };
+                            };
+                            const car2 = new Car('prata',150000,'Corolla','Toyta');
+                            console.log(car2);
+                            console.log(car2.info());
+                            // run:
+                                Car {
+                                    color: 'prata',
+                                    price: 150000,
+                                    model: 'Corolla',
+                                    brand: 'Toyta',
+                                    info: [Function (anonymous)]
+                                }
+                                Carro Toyta Corolla na cor prata esta custando 150000
+                        </code>
+                    </pre>
+                </div>
+                <h3>Notação literal</h3>
+                <div class="conteinerExemples">
+                    <pre>
+                        <code>
+                            const car3 = {
+                                color: red,
+                                price: 100000,
+                                model: 'Uno Drive',
+                                brand: 'Fiat',
+                                info: ()=>{
+                                    return `Carro ${carUno.brand} ${carUno.model}  na cor ${carUno.color} esta custando ${carUno.price}`
+                                 }
+                            };
+                            // run:
+                                {
+                                    color: 'red',
+                                    price: 100000,
+                                    model: 'Uno Drive',
+                                    brand: 'Fiat',
+                                    info: [Function (anonymous)]
+                                }
+                                Carro Fiat Uno Drive  na cor red esta custando 100000
+                            </code>
+                        </pre>
+                </div>
+            </article>
+        </section>
+            
+            <section class="conteinerSection">
+                <article class="conteinerArticle">
+                    <h2>Acessadores de propriedades</h2>
+                    <p> Pode-se pensar que objetos se comprotam como uma array matriz associativa. O nome da chave da propriedade funciona como um indice ou indentificador, que é associado ao valor da propriedade. Acessadores de propriedades fornecem acesso às propriedades de um objeto associando elas ao nome da variável usando a notação de ponto '.' ou a notação de colchetes '[]'. Desta maneira podemos acessar as <strong>propriedades</strong> do objeto fora dele para <strong>reatribuição de valor</strong> ou então para <strong>inseri-las em outro trecho de código do programa</strong>.</p>
+                    <h3>Exemplo de sintaxe (dot notation)</h3>
+                    <div class="conteinerExemples">
+                        <pre>
+                            <code>
+                                let car = Object.create({});
+                                car.color = 'azul';
+                                car.model = 'Gol G7';
+                                car.brand = 'VM';
+                                console.log(car.model);
+                                // run:
+                                    Gol G7
+                            </code>
+                        </pre>
+                    </div>
+                    <p>No exemplo de sintaxe acima foi usada a <strong>notação de ponto</strong> que é a mais usada para trabalhamos acessando objetos, porém se declararmos <em>car['color']</em> tambem funcionará normalmente. O nome de uma propriedade de objeto pode ser qualquer string javascript válida ou também qualquer coisa que possa ser convertida para uma string válida, incluindo até mesmo string vazia. No entanto, qualquer nome de propriedade que não seja um indentificador javascript válido (como exemplo, nome de propriedae que contém espaço ou hifén, ou que comece com um número) só poderá ser acessado(a) utilizando a notação de colchetes. Essa notação também é muito útil quando queremos acessar uma propriedade de um objeto de maneira dinâmica (Quando o nome da propriedade não é determinado até o momento da execução).</p>
+                    <h3>Exemplo de sintaxe (bracket notation)</h3>
+                    <div class="conteinerExemples">
+                        <pre>
+                            <code>
+                                const user = {
+                                    name: 'Rafael',
+                                    'last-name': 'Araujo',
+                                }
+                                console.log(user['last-name']);
+                                // run:
+                                    Araujo
+                            </code>
+                        </pre>
+                    </div>
+                    <p>Já quando precisamos acessar uma propriedade de maneira dinâmica, onde uma string esta armazenada em uma variável, devemos usar a notação de colchetes para receber (dentro), a variável que irá passar o valor de string para nomear a propriedade do objeto.</p>
+                    <h3>Exemplo de sintaxe Propriedades dinâmicas</h3>
+                    <div class="conteinerExemples">
+                        <pre>
+                            <code>
+                                const meuCarro = {};
+                                const fabricante = 'fabricante';
+                                const modelo = 'modelo';
+                                meuCarro[fabricante] = 'Ford';
+                                meuCarro[modelo] = 'Mustang';
+                                console.log(meuCarro);
+                                //run:
+                                    { fabricante: 'Ford', modelo: 'Mustang' }
+                            </code>
+                        </pre>
+                    </div>
+                    <p>Este conceito de propriedade dinâmica é muito útil quando declaramos um objeto literal dentro de uma função pois podemos acessar uma propriedade do objeto utilizando como <strong>chave</strong> o valor de um parâmetro da função (já que parâmetros de função são variáveis).</p>
+                    <h3>Exemplo de sintaxe propriedades dinâmicas em Funções</h3>
+                    <div class="conteinerExemples">
+                        <pre>
+                            <code>
+                                const setAccType = (accType) => {
+                                const typeCards = {
+                                    platinum: 'Platinum Customer',
+                                    gold: 'Gold Customer',
+                                    silver: 'Silver Customer',
+                                    getAccType(){
+                                        return typeCards[accType]
+                                    }
+                                }
+                                return typeCards.getAccType()
+                            }
+                            console.log(setAccType('silver'));
+                            // run:
+                                Silver Customer
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+            </section>
+            <p></p>
+    </main>
+    <script src="objetoLiteral.js"></script>
+</body>
+</html>
